@@ -49,6 +49,14 @@ useHead({
             rel: "favicon",
             href: "https://images.simonbotte.fr/cadeaux.simonbotte.fr/favicon.ico",
         },
+        {
+            rel: "shortcut icon",
+            href: "https://images.simonbotte.fr/cadeaux.simonbotte.fr/favicon.ico",
+        },
+        {
+            rel: "apple-touch-icon",
+            href: "https://images.simonbotte.fr/cadeaux.simonbotte.fr/favicon.ico",
+        },
     ],
 });
 </script>
