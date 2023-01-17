@@ -1,12 +1,12 @@
 <template>
-    <div class="container allGifts">
+    <div class="container allGifts" v-bind:class="loading ? '' : 'loaded'">
         <h2 class="allGifts__title">Pas d’idées ? En voilà plein</h2>
         <div class="gifts">
-            <a
-                target="_blank"
-                :href="gift.attributes.link"
+            <a                
                 v-for="gift in gifts"
+                :href="gift.attributes.link"
                 class="gift"
+                v-bind:target="'_blank'"
             >
                 <div class="gift__image">
                     <img
@@ -39,33 +39,32 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
     name: "Gifts",
-    created() {
-        axios
-            .get("/api/gifts")
-            .then((res) => {
-                this.gifts = res.data.data;
-            })
-            .catch((error) => {});
-    },
-    data() {
-        return {
-            gifts: [],
-        };
-    },
 };
+</script>
+
+<script setup>
+    import { useFetch, useFetchCache } from "@/composables/useFetch.js";
+
+    const { response, data, error, loading } = useFetchCache("gifts", '/api/gifts');
+    let gifts = data;
 </script>
 
 <style scoped lang="scss">
 .allGifts {
     margin-top: 50px;
     margin-bottom: 50px;
+    opacity: 0;
+    
     &__title {
         margin-bottom: 16px;
         font-size: 1.5rem;
         color: var(--blue);
+    }
+    &.loaded {
+        opacity: 1;
+        transition: 500ms ease;
     }
 }
 .gifts {

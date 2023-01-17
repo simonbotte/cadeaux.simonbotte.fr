@@ -4,6 +4,7 @@ export default defineEventHandler(async (event) => {
     let word = null;
     const runtimeConfig = useRuntimeConfig()
     const token = runtimeConfig.apiToken;
+    
     const config = {
         headers: {
             Authorization: `Bearer ${token}`,

@@ -1,6 +1,6 @@
 <template>
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swiper" v-bind:class="loading ? '' : 'loaded'">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -39,56 +39,57 @@
 </template>
 
 <script>
-import axios from "axios";
-// import Swiper JS
-import Swiper, { Autoplay, Parallax } from "swiper";
-// import Swiper styles
-import "swiper/css";
-
 export default {
     name: "About",
-    created() {
-        axios
-            .get("/api/slides")
-            .then((res) => {
-                this.slides = res.data.data;
-                setTimeout(() => {
-                    const swiper = new Swiper(".swiper", {
-                        modules: [Autoplay, Parallax],
-                        // Optional parameters
-                        speed: 500,
-                        parallax: true,
-                        loop: true,
-                        autoplay: {
-                            delay: 5000,
-                            disableOnInteraction: false,
-                        },
-                        cssMode: false,
-                    });
-                }, 1);
-            })
-            .catch((error) => {});
-    },
-    onCreate() {},
-    data() {
-        return {
-            slides: [],
-            orientation: "horizontal",
-        };
-    },
 };
+</script>
+
+<script setup>
+import { watch } from "vue";
+import { useFetch, useFetchCache } from "@/composables/useFetch.js";
+import Swiper, { Autoplay, Parallax } from "swiper";
+import "swiper/css";
+const { response, data, error, loading } = useFetchCache(
+    "slides",
+    "/api/slides"
+);
+
+let slides = data;
+
+watch(data, (before, after) => {
+
+    setTimeout(() => {
+        const swiper = new Swiper(".swiper", {
+            modules: [Autoplay, Parallax],
+            // Optional parameters
+            speed: 500,
+            parallax: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            cssMode: false,
+        });
+    }, 1);
+});
 </script>
 
 <style scoped lang="scss">
 .swiper {
     width: 100%;
     height: 500px;
+    opacity: 0;
     &-slide {
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+    }
+    &.loaded {
+        opacity: 1;
+        transition: 500ms;
     }
 }
 .slide {
