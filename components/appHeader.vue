@@ -1,14 +1,8 @@
 <template>
     <header class="container">
-        <h1>La liste de cadeaux de simon</h1>
+        <h1>La liste de cadeaux de Simon</h1>
     </header>
 </template>
-
-<script>
-export default {
-    name: 'AppHeader',
-}
-</script>
 
 <style scoped lang="scss">
 header{

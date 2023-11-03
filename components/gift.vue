@@ -1,40 +1,40 @@
 <template>
-    <div class="container allGifts" v-bind:class="loading ? '' : 'loaded'">
-        <h2 class="allGifts__title">Pas d’idées ? En voilà plein</h2>
-        <div class="gifts">
-            <Gift v-for="gift in gifts" :gift="gift" />
+    <a :href="gift.attributes.link" class="gift" v-bind:target="'_blank'">
+        <div class="gift__image">
+            <img
+                class="gift__image--base"
+                :src="'https://api.simonbotte.fr' + gift.attributes.pictures.data[0].attributes.url"
+            />
+            <img
+                class="gift__image--hover"
+                :src="'https://api.simonbotte.fr' + gift.attributes.pictures.data[1].attributes.url"
+            />
         </div>
-    </div>
+        <div class="gift__data">
+            <h2 class="gift__title">{{ gift.attributes.name }}</h2>
+            <div class="gift__dataRow">
+                <p class="gift__description">
+                    {{
+                        gift.attributes.description.substring(0, 199) +
+                        (gift.attributes.description.length > 200 ? "..." : "")
+                    }}
+                </p>
+                <p class="gift__price">{{ gift.attributes.price }}€</p>
+            </div>
+        </div>
+    </a>
 </template>
 
 <script setup>
-    import { useFetch, useFetchCache } from "@/composables/useFetch.js";
-
-    const { response, data, error, loading } = useFetchCache("gifts", '/api/gifts');
-    let gifts = data;
+const props = defineProps({
+    gift: {
+        type: Object,
+        required: true,
+    },
+});
 </script>
 
 <style scoped lang="scss">
-.allGifts {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    opacity: 0;
-    
-    &__title {
-        margin-bottom: 16px;
-        font-size: 1.5rem;
-        color: var(--blue);
-    }
-    &.loaded {
-        opacity: 1;
-        transition: 500ms ease;
-    }
-}
-.gifts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
 .gift {
     width: 100%;
     text-decoration: none;
@@ -75,9 +75,10 @@
     &__price {
         font-size: 0.75rem;
     }
-    &__dataRow{
+    &__dataRow {
         display: flex;
         justify-content: space-between;
+        gap: 8px;
     }
     &:hover {
         .gift__image--hover {
@@ -89,9 +90,6 @@
     }
 }
 @media screen and (min-width: 768px) {
-    .gifts {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .gift {
         &__title {
             font-size: 1rem;
@@ -101,5 +99,4 @@
         }
     }
 }
-
 </style>

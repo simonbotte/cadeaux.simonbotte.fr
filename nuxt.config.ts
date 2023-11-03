@@ -2,9 +2,8 @@
 export default defineNuxtConfig({
     css: [
         // SCSS file in the project
-        '@/assets/css/main.scss',
-        '@/assets/css/button.scss',
-        
+        "@/assets/css/main.scss",
+        "@/assets/css/button.scss",
     ],
     runtimeConfig: {
         apiToken: process.env.NUXT_STRAPI_TOKEN,

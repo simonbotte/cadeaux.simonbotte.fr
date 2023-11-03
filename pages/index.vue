@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <appSlider></appSlider>
+        <AppHero></AppHero>
         <theWord></theWord>
         <Gifts></Gifts>
     </div>

@@ -7,12 +7,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "TheWord",
-};
-</script>
-
 <script setup>
 import { useFetch, useFetchCache } from "@/composables/useFetch.js";
 

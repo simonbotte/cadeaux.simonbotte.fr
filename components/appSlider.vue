@@ -38,12 +38,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "About",
-};
-</script>
-
 <script setup>
 import { watch } from "vue";
 import { useFetch, useFetchCache } from "@/composables/useFetch.js";

@@ -25,13 +25,7 @@
         </div>
 
         <div class="custom-shape-divider-bottom-1673093835 vertical">
-            <svg
-                width="120"
-                height="900"
-                viewBox="0 0 120 900"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="120" height="900" viewBox="0 0 120 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_121_279)">
                     <path
                         opacity="0.25"
@@ -50,28 +44,20 @@
                 </g>
                 <defs>
                     <clipPath id="clip0_121_279">
-                        <rect
-                            width="1200"
-                            height="120"
-                            fill="white"
-                            transform="translate(120 -300) rotate(90)"
-                        />
+                        <rect width="1200" height="120" fill="white" transform="translate(120 -300) rotate(90)" />
                     </clipPath>
                 </defs>
             </svg>
         </div>
     </div>
 </template>
-<script>
-export default {
-    name: "SliderWaves",
-    props: {
-        orientation: {
-            type: String,
-            default: "horizontal",
-        },
+<script setup>
+const props = defineProps({
+    orientation: {
+        type: String,
+        default: "horizontal",
     },
-};
+});
 </script>
 
 <style scoped lang="scss">
@@ -108,7 +94,7 @@ export default {
         height: 100%;
         line-height: 0;
         overflow: hidden;
-        svg{
+        svg {
             height: 100%;
         }
     }
