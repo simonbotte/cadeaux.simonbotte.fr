@@ -53,9 +53,6 @@ onMounted(() => {
         opacity: 0,
         duration: 0.3,
     });
-    window.addEventListener("resize", () => {
-        ScrollTrigger.refresh();
-    });
 });
 </script>
 
