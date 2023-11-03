@@ -1,5 +1,5 @@
 <template>
-    <div class="container allGifts" v-bind:class="loading ? '' : 'loaded'">
+    <div class="container allGifts">
         <h2 class="allGifts__title">Pas d’idées ? En voilà plein</h2>
         <div class="gifts">
             <Gift v-for="gift in gifts" :gift="gift" />
@@ -8,10 +8,14 @@
 </template>
 
 <script setup>
-    import { useFetch, useFetchCache } from "@/composables/useFetch.js";
-
-    const { response, data, error, loading } = useFetchCache("gifts", '/api/gifts');
-    let gifts = data;
+const { data, loading } = await useFetch("/api/gifts");
+const gifts = ref(data.value.data);
+console.log(gifts.value);
+onMounted(() => {
+    setTimeout(() => {
+        document.querySelector(".allGifts").classList.add("loaded");
+    }, 100);
+});
 </script>
 
 <style scoped lang="scss">
@@ -19,7 +23,7 @@
     margin-top: 50px;
     margin-bottom: 50px;
     opacity: 0;
-    
+    transform: translateY(100px);
     &__title {
         margin-bottom: 16px;
         font-size: 1.5rem;
@@ -27,12 +31,13 @@
     }
     &.loaded {
         opacity: 1;
+        transform: translateY(0px);
         transition: 500ms ease;
     }
 }
 .gifts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
 }
 .gift {
@@ -75,7 +80,7 @@
     &__price {
         font-size: 0.75rem;
     }
-    &__dataRow{
+    &__dataRow {
         display: flex;
         justify-content: space-between;
     }
@@ -88,7 +93,12 @@
         }
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
+    .gifts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px) {
     .gifts {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -101,5 +111,4 @@
         }
     }
 }
-
 </style>

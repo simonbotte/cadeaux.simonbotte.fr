@@ -11,4 +11,5 @@ export default defineNuxtConfig({
             apiUrl: "http://localhost:1337/api",
         },
     },
+    ssr: true,
 });

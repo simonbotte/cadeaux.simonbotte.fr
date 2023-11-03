@@ -15,7 +15,6 @@ export default {
 <script setup>
 const title = ref("Liste de cadeaux de simon");
 const description = ref("Trouver un cadeau pour montrer à quelqu'un qu'on tient à lui peut être difficile. J'ai donc préparé une liste d'idées de cadeau pour aider ceux qui n'ont pas d'idée.");
-// This will be reactive even you change title/description above
 useHead({
     title,
     meta: [

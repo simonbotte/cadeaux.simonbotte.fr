@@ -1,17 +1,18 @@
 <template>
-    <div class="container theWord" v-bind:class="loading ? '' : 'loaded'">
-        <article>
-            <h2>{{ word?.attributes?.title }}</h2>
-            <p v-if="word?.attributes != undefined" v-html="word?.attributes?.paragraphe"></p>
-        </article>
-    </div>
+    <section class="container theWord">
+        <h2>{{ word?.attributes?.title }}</h2>
+        <p v-html="word?.attributes?.paragraphe"></p>
+    </section>
 </template>
 
 <script setup>
-import { useFetch, useFetchCache } from "@/composables/useFetch.js";
-
-const { response, data, error, loading } = useFetchCache("word", "/api/word/");
-let word = data;
+const { data, loading } = await useFetch("/api/word/");
+let word = ref(data.value.data);
+onMounted(() => {
+    setTimeout(() => {
+        document.querySelector(".theWord").classList.add("loaded");
+    }, 100);
+});
 </script>
 
 <style scoped lang="scss">
@@ -38,5 +39,4 @@ let word = data;
         transition: 500ms ease;
     }
 }
-
 </style>
