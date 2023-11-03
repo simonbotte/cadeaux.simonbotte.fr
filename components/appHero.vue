@@ -41,11 +41,16 @@
             font-size: 1.5rem;
             color: var(--blue);
         }
+        &__lottie {
+            max-width: 100%;
+        }
+        &__decoration {
+            max-width: 100%;
+        }
     }
 }
 @media (min-width: 992px) {
     .appHero {
-
         &__container {
             flex-direction: row;
             text-align: left;

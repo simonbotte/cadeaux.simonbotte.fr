@@ -2,7 +2,7 @@
     <div class="container allGifts">
         <h2 class="allGifts__title">Pas d’idées ? En voilà plein</h2>
         <div class="gifts">
-            <Gift v-for="gift in gifts" :gift="gift" />
+            <Gift v-for="gift in gifts" :gift-data="gift" />
         </div>
     </div>
 </template>
@@ -10,35 +10,22 @@
 <script setup>
 const { data, loading } = await useFetch("/api/gifts");
 const gifts = ref(data.value.data);
-console.log(gifts.value);
-onMounted(() => {
-    setTimeout(() => {
-        document.querySelector(".allGifts").classList.add("loaded");
-    }, 100);
-});
 </script>
 
 <style scoped lang="scss">
 .allGifts {
     margin-top: 50px;
-    margin-bottom: 50px;
-    opacity: 0;
-    transform: translateY(100px);
+    margin-bottom: 164px;
     &__title {
         margin-bottom: 16px;
         font-size: 1.5rem;
         color: var(--blue);
     }
-    &.loaded {
-        opacity: 1;
-        transform: translateY(0px);
-        transition: 500ms ease;
-    }
 }
 .gifts {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 64px;
 }
 .gift {
     width: 100%;
