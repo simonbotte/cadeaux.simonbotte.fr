@@ -3,6 +3,7 @@
         <AppHero></AppHero>
         <theWord></theWord>
         <Gifts></Gifts>
+        <NewComing></NewComing>
     </div>
 </template>
 

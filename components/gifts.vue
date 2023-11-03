@@ -15,7 +15,7 @@ const gifts = ref(data.value.data);
 <style scoped lang="scss">
 .allGifts {
     margin-top: 50px;
-    margin-bottom: 164px;
+    margin-bottom: 64px;
     &__title {
         margin-bottom: 16px;
         font-size: 1.5rem;
