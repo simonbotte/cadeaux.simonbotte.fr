@@ -1,14 +1,16 @@
 <template>
-    <div ref="gift" class="gift">
+    <div ref="gift" :class="'gift gift--' + theme">
         <NuxtLink :href="giftData.attributes.link" :target="'_blank'">
             <div class="gift__image">
                 <img
+                    v-if="giftData.attributes?.pictures?.data != null && giftData.attributes?.pictures?.data.length > 0"
                     class="gift__image--base"
-                    :src="'https://api.simonbotte.fr' + giftData.attributes.pictures.data[0].attributes.url"
+                    :src="'https://api.simonbotte.fr' + giftData.attributes?.pictures?.data[0].attributes.url"
                 />
                 <img
+                    v-if="giftData.attributes?.pictures?.data != null && giftData.attributes?.pictures?.data.length > 1"
                     class="gift__image--hover"
-                    :src="'https://api.simonbotte.fr' + giftData.attributes.pictures.data[1].attributes.url"
+                    :src="'https://api.simonbotte.fr' + giftData.attributes?.pictures?.data[1].attributes.url"
                 />
             </div>
             <div class="gift__data">
@@ -36,6 +38,10 @@ const props = defineProps({
     giftData: {
         type: Object,
         required: true,
+    },
+    theme: {
+        type: String,
+        default: "light",
     },
 });
 
@@ -66,7 +72,7 @@ onMounted(() => {
     &__image {
         width: 100%;
         display: grid;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
         img {
             grid-column: 1/1;
             grid-row: 1/1;
@@ -91,21 +97,19 @@ onMounted(() => {
     }
     &__title {
         font-size: 1.5rem;
-        line-height: 1.5rem;
+        line-height: 1.75rem;
     }
     &__description {
-        font-size: 1rem;
+        font-size: 0.75rem;
         opacity: 0.8;
-    }
-    &__price {
-        font-size: 1.25rem;
+        line-height: 1.25rem;
+        letter-spacing: 1.1;
     }
     &__dataRow {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 16px;
-
     }
     &:hover {
         .gift__image--hover {
@@ -116,14 +120,12 @@ onMounted(() => {
         }
     }
 }
-@media screen and (min-width: 768px) {
-    .gift {
-        &__title {
-            font-size: 1rem;
-        }
-        &__price {
-            font-size: 0.875rem;
-        }
+
+.gift--dark {
+    a {
+        color: var(--light-blue);
+        text-decoration: none;
     }
 }
+
 </style>

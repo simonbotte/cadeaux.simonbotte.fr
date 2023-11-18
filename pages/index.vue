@@ -1,21 +1,18 @@
 <template>
     <div class="home">
-        <AppHero></AppHero>
+        <Hero></Hero>
         <theWord></theWord>
-        <Gifts></Gifts>
+        <BestGifts :gifts="bestGifts"></BestGifts>
+        <Gifts :gifts="normalGifts"></Gifts>
         <NewComing></NewComing>
     </div>
 </template>
 
-<script>
-export default {
-    name: "Index",
-};
-</script>
-
 <script setup>
 const title = ref("Liste de cadeaux de simon");
-const description = ref("Trouver un cadeau pour montrer à quelqu'un qu'on tient à lui peut être difficile. J'ai donc préparé une liste d'idées de cadeau pour aider ceux qui n'ont pas d'idée.");
+const description = ref(
+    "Trouver un cadeau pour montrer à quelqu'un qu'on tient à lui peut être difficile. J'ai donc préparé une liste d'idées de cadeau pour aider ceux qui n'ont pas d'idée."
+);
 useHead({
     title,
     meta: [
@@ -59,6 +56,11 @@ useHead({
         },
     ],
 });
+
+const { data, loading } = await useFetch("/api/gifts");
+const gifts = ref(data.value.data);
+const bestGifts = ref(data.value.data.filter((gift) => gift.attributes.best));
+const normalGifts = ref(data.value.data.filter((gift) => !gift.attributes.best));
 </script>
 
 <style scoped lang="scss"></style>
