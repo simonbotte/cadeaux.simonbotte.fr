@@ -52,6 +52,17 @@ const categories = reactive([
         ],
     },
     {
+        name: "Jeux",
+        items: [
+            {
+                title: "Coloretto",
+                description: "Jeu de combinaison et de prise de risque.",
+                image: "https://www.espritjeu.com/upload/image/coloretto-p-image-87155-grande.jpg",
+                link: "https://www.espritjeu.com/jeu-de-societe/coloretto.html?srsltid=AfmBOopuJjSSAv2k4fw2yluWBMUAloMqilbv38HzMb4V9RE9fNgIH-fV",
+            }
+        ]
+    },
+    {
         name: "Blu-ray 4k",
         items: [
             {
@@ -97,6 +108,21 @@ const categories = reactive([
         ],
     },
 ]);
+
+useHead({
+    title: "Ma liste au Papa Noël",
+    meta: [
+        {
+            name: "description",
+            content:
+                "Découvrez ma liste de souhaits pour Noël, remplie d'idées de cadeaux soigneusement sélectionnées pour cette saison festive.",
+        },
+    ],
+    htmlAttrs: {
+        lang: "fr",
+        class: "bg-slate-950",
+    },
+});
 
 onMounted(() => {
     const gsap = $gsap;
@@ -181,10 +207,10 @@ onMounted(() => {
                 </div>
             </section>
         </div>
-        <section class="bg-slate-200 pt-10 flex flex-col gap-8">
+        <section class="bg-slate-200 pt-10 flex flex-col gap-8 pb-10 px-3">
             <div v-for="category in categories" class="max-w-200 m-auto flex flex-col gap-4" :key="`category-${category.name}`">
                 <h2 class="text-3xl text-bolder font-serif">{{ category.name }}</h2>
-                <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
                     <li v-for="item in category.items" :key="`item-${item.title}`" class="h-full">
                         <a :href="item.link" class="bg-white p-4 flex flex-col justify-between rounded-2xl h-full">
                             <div class="mx-auto w-full max-w-[440px] overflow-hidden relative h-full flex items-center">
