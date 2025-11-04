@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --font-serif: "PPAcma", sans-serif;
+    --default-transition-duration: 300ms;
+}
