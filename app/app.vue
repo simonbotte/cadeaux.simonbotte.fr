@@ -52,24 +52,25 @@ const categories = reactive([
         ],
     },
     {
-        name: "Jeux",
+        name: "Divertissement",
         items: [
+            {
+                title: "Coffret The Dark Knight 4K",
+                description: "Le meilleurs de Batman.",
+                image: "https://static.fnac-static.com/multimedia/Images/FR/NR/5b/a1/e0/14721371/1540-1/tsp20221011170122/Coffret-The-Dark-Knight-Edition-Speciale-Fnac-Blu-ray-4K-Ultra-HD.jpg",
+                link: "https://www.fnac.com/a17374716/Coffret-The-Dark-Knight-Edition-Speciale-Fnac-Blu-ray-4K-Ultra-HD-Christian-Bale-Blu-ray-4K",
+            },
             {
                 title: "Coloretto",
                 description: "Jeu de combinaison et de prise de risque.",
                 image: "https://www.espritjeu.com/upload/image/coloretto-p-image-87155-grande.jpg",
                 link: "https://www.espritjeu.com/jeu-de-societe/coloretto.html?srsltid=AfmBOopuJjSSAv2k4fw2yluWBMUAloMqilbv38HzMb4V9RE9fNgIH-fV",
-            }
-        ]
-    },
-    {
-        name: "Blu-ray 4k",
-        items: [
+            },
             {
-                title: "Coffret The Dark Knight 4K (Édition Spéciale Fnac)",
-                description: "Le meilleurs de Batman.",
-                image: "https://static.fnac-static.com/multimedia/Images/FR/NR/5b/a1/e0/14721371/1540-1/tsp20221011170122/Coffret-The-Dark-Knight-Edition-Speciale-Fnac-Blu-ray-4K-Ultra-HD.jpg",
-                link: "https://www.fnac.com/a17374716/Coffret-The-Dark-Knight-Edition-Speciale-Fnac-Blu-ray-4K-Ultra-HD-Christian-Bale-Blu-ray-4K",
+                title: "7 Yokai",
+                description: "Jeu de plis asymétrique.",
+                image: "https://cdn2.philibertnet.com/726219-large_default/yokai-septet.jpg",
+                link: "https://www.espritjeu.com/7-yokai.html?srsltid=AfmBOoqW4RvXwuoLzeFFPJeRqhc5SzYgMhmlczutRU1dVsWT3NhFG7qt",
             },
         ],
     },
@@ -105,6 +106,12 @@ const categories = reactive([
                 image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGD44?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=MzN0emlEaWVTbmFHMkZjcExKbEZFZ2tuVHYzMERCZURia3c5SzJFOTlPZ1p3a1FSWkNyRzExM1dnU25TSHAxTlU3ZTBSb0RvTTd5eUlBK3M1Zm9sTlE",
                 link: "https://www.apple.com/fr/shop/product/mgd44zm/a/boucle-sport-nike-gris-voilé-46-mm",
             },
+            {
+                title: "Apple Watch Hermès - En Mer Orange 49 mm",
+                description: "La classe à la française.",
+                image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGN94?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QVptOGY1MkJ6VVpIMDZDSHA1c2JVUWtuVHYzMERCZURia3c5SzJFOTlPZ1JyNmpKMEI2VStpRkVmclovWERhZldlRWJUR3Y4M1l2UE5FN0JZYm1FQ0E",
+                link: "https://www.apple.com/fr/shop/product/mgn94zm/a/apple-watch-hermès-en-mer-orange-49-mm?fnode=a81e245e20e8c0f0de080ac2a71d6ad6fa09e0ee1f8db0500258b76b84dab0a1233eb5aece62ac9b42240b23d0b82589991992eb53ac45a84aa36c1379a6e9b3a370295159eb6a753268f7d217a9a60c",
+            }
         ],
     },
 ]);
@@ -201,17 +208,21 @@ onMounted(() => {
                     <p class="text-center">
                         Dans ma liste de souhaits, tu trouveras des idées que je chéris toutes autant les unes que les
                         autres. Il y a bien sûr de quoi se divertir avec une bonne histoire, qu’elle soit filmée ou
-                        dessinée, mais aussi de quoi mieux prendre plaisir à cuisiner. Et, bien sûr, de quoi
-                        faire grimper un peu l’action Apple.
+                        dessinée, mais aussi de quoi mieux prendre plaisir à cuisiner. Et, bien sûr, de quoi faire
+                        grimper un peu l’action Apple.
                     </p>
                 </div>
             </section>
         </div>
         <section class="bg-slate-200 pt-10 flex flex-col gap-8 pb-10 px-3">
-            <div v-for="category in categories" class="max-w-200 m-auto flex flex-col gap-4" :key="`category-${category.name}`">
+            <div
+                v-for="category in categories"
+                class="max-w-200 m-auto flex flex-col gap-4"
+                :key="`category-${category.name}`"
+            >
                 <h2 class="text-3xl text-bolder font-serif">{{ category.name }}</h2>
                 <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                    <li v-for="item in category.items" :key="`item-${item.title}`" class="h-full">
+                    <li v-for="item in category.items" :key="`item-${item.title}`" class="min-h-80 h-full">
                         <a :href="item.link" class="bg-white p-4 flex flex-col justify-between rounded-2xl h-full">
                             <div class="mx-auto w-full max-w-[440px] overflow-hidden relative h-full flex items-center">
                                 <img
