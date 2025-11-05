@@ -124,6 +124,26 @@ useHead({
             content:
                 "Découvrez ma liste de souhaits pour Noël, remplie d'idées de cadeaux soigneusement sélectionnées pour cette saison festive.",
         },
+        {
+            name: "og:title",
+            content: "Ma liste au Papa Noël",
+        },
+        {
+            name: "og:description",
+            content:
+                "Découvrez ma liste de souhaits pour Noël, remplie d'idées de cadeaux soigneusement sélectionnées pour cette saison festive.",
+        },
+        {
+            name: "og:image",
+            content: "https://cadeaux.smnb.fr/og-image.png",
+        }
+    ],
+    link: [
+        {
+            rel: "icon",
+            type: "image/webp",
+            href: "/favicon.webp",
+        },
     ],
     htmlAttrs: {
         lang: "fr",
