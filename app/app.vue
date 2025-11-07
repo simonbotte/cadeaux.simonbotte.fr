@@ -111,9 +111,26 @@ const categories = reactive([
                 description: "La classe à la française.",
                 image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGN94?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QVptOGY1MkJ6VVpIMDZDSHA1c2JVUWtuVHYzMERCZURia3c5SzJFOTlPZ1JyNmpKMEI2VStpRkVmclovWERhZldlRWJUR3Y4M1l2UE5FN0JZYm1FQ0E",
                 link: "https://www.apple.com/fr/shop/product/mgn94zm/a/apple-watch-hermès-en-mer-orange-49-mm?fnode=a81e245e20e8c0f0de080ac2a71d6ad6fa09e0ee1f8db0500258b76b84dab0a1233eb5aece62ac9b42240b23d0b82589991992eb53ac45a84aa36c1379a6e9b3a370295159eb6a753268f7d217a9a60c",
+            },
+            {
+                title: "AirTag",
+                description: "Pour traquer le vélo",
+                image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airtag-single-select-202104?wid=940&hei=1112&fmt=png-alpha&.v=a2ZqcUtUS1VMaUZQNkl6T3JzY1ZmM2VtMnRWRDBsa0dSNys0czlzRGpsWUcvVUdZSjVwcUlDeFRXWEVzclZJSHg2bitObzZwQzk4cEorV1dZdzhIa3pOYWxjbnhLdlBxcWZOdnQwOWRQZk0",
+                link: "https://amzn.eu/d/1uFeWES",
             }
         ],
     },
+    {
+        name: "Autres",
+        items: [
+            {
+                title: "Support pour AirTag",
+                description: "Pour cacher le AirTag sur le vélo.",
+                image: "https://m.media-amazon.com/images/I/41qmS5Nh93L._AC_.jpg",
+                link: "https://amzn.eu/d/8eoF0ew",
+            }
+        ]
+    }
 ]);
 
 useHead({
