@@ -101,12 +101,6 @@ const categories = reactive([
         name: "Apple",
         items: [
             {
-                title: "Bracelet Apple Watch Nike (46 mm)",
-                description: "Sport, respirant.",
-                image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGD44?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=MzN0emlEaWVTbmFHMkZjcExKbEZFZ2tuVHYzMERCZURia3c5SzJFOTlPZ1p3a1FSWkNyRzExM1dnU25TSHAxTlU3ZTBSb0RvTTd5eUlBK3M1Zm9sTlE",
-                link: "https://www.apple.com/fr/shop/product/mgd44zm/a/boucle-sport-nike-gris-voilé-46-mm",
-            },
-            {
                 title: "Apple Watch Hermès - En Mer Orange 49 mm",
                 description: "La classe à la française.",
                 image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGN94?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=QVptOGY1MkJ6VVpIMDZDSHA1c2JVUWtuVHYzMERCZURia3c5SzJFOTlPZ1JyNmpKMEI2VStpRkVmclovWERhZldlRWJUR3Y4M1l2UE5FN0JZYm1FQ0E",
