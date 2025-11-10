@@ -140,6 +140,12 @@ const categories = reactive([
                 description: "C'est magnifique non ?",
                 image: "https://static.fnac-static.com/multimedia/Images/FR/MDM/48/00/a3/27459656/1520-1/tsp20250225135647/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac.jpg/-/Sites-patagonia-master/default/dw248ba34d/images/hi-res/22321_ELGR.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
                 link: "https://www.fnac.com/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac/a20974622/w-4?storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
+						},
+						{
+								title: "Sweat à capuche",
+                description: "S'habiller comme un développeur",
+                image: "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/471808/sub/goods_471808_sub14_3x4.jpg?width=60027459656/1520-1/tsp20250225135647/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac.jpg/-/Sites-patagonia-master/default/dw248ba34d/images/hi-res/22321_ELGR.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+                link: "https://https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=58&sizeDisplayCode=005storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
 						}
         ]
     }
