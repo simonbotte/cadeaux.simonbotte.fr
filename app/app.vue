@@ -111,7 +111,13 @@ const categories = reactive([
                 description: "Pour traquer le vélo",
                 image: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airtag-single-select-202104?wid=940&hei=1112&fmt=png-alpha&.v=a2ZqcUtUS1VMaUZQNkl6T3JzY1ZmM2VtMnRWRDBsa0dSNys0czlzRGpsWUcvVUdZSjVwcUlDeFRXWEVzclZJSHg2bitObzZwQzk4cEorV1dZdzhIa3pOYWxjbnhLdlBxcWZOdnQwOWRQZk0",
                 link: "https://amzn.eu/d/1uFeWES",
-            }
+            },
+						{
+                title: "Visio Pro M5",
+                description: "Incroyablement incroyable",
+                image: "https://www.apple.com/v/apple-vision-pro/i/images/specs/hero__cvgr5aj1ttsi_small_2x.jpgairtag-single-select-202104?wid=940&hei=1112&fmt=png-alpha&.v=a2ZqcUtUS1VMaUZQNkl6T3JzY1ZmM2VtMnRWRDBsa0dSNys0czlzRGpsWUcvVUdZSjVwcUlDeFRXWEVzclZJSHg2bitObzZwQzk4cEorV1dZdzhIa3pOYWxjbnhLdlBxcWZOdnQwOWRQZk0",
+                link: "https://www.apple.com/fr/shop/buy-vision/apple-vision-pro",
+            },
         ],
     },
     {
@@ -122,7 +128,19 @@ const categories = reactive([
                 description: "Pour cacher le AirTag sur le vélo.",
                 image: "https://m.media-amazon.com/images/I/41qmS5Nh93L._AC_.jpg",
                 link: "https://amzn.eu/d/8eoF0ew",
-            }
+            },
+						{
+								title: "Casquette Patagonia",
+                description: "Pour un style inégalé",
+                image: "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw248ba34d/images/hi-res/22321_ELGR.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+                link: "https://eu.patagonia.com/fr/fr/product/p-6-label-maclure-five-panel-hat/198077201458.html",
+						},
+						{
+								title: "Lego La tête dans les étoiles avec Pharrell Williams",
+                description: "C'est magnifique non ?",
+                image: "https://static.fnac-static.com/multimedia/Images/FR/MDM/48/00/a3/27459656/1520-1/tsp20250225135647/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac.jpg/-/Sites-patagonia-master/default/dw248ba34d/images/hi-res/22321_ELGR.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+                link: "https://www.fnac.com/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac/a20974622/w-4?storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
+						}
         ]
     }
 ]);
