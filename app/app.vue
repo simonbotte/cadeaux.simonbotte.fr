@@ -112,12 +112,6 @@ const categories = reactive([
                 image: "/img/gift/sweat.jpg",
                 link: "https://https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=58&sizeDisplayCode=005storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
             },
-            {
-                title: "Casquette Patagonia",
-                description: "Pour un style inégalé",
-                image: "/img/gift/casquette.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/p-6-label-maclure-five-panel-hat/198077201458.html",
-            },
         ],
     },
     {
