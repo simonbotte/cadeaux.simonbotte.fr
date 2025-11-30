@@ -113,12 +113,6 @@ const categories = reactive([
                 link: "https://https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=58&sizeDisplayCode=005storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
             },
             {
-                title: "Veste Patagonia",
-                description: "S'habiller comme un Bordelais",
-                image: "/img/gift/veste.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
-            },
-            {
                 title: "Casquette Patagonia",
                 description: "Pour protéger mes idées",
                 image: "/img/gift/casquette-2.webp",
