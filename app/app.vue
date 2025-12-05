@@ -78,6 +78,18 @@ const categories = reactive([
                 image: "/img/gift/lego-pharell.webp",
                 link: "https://www.fnac.com/LEGO-Icons-10391-La-tete-dans-les-etoiles-avec-Pharrell-Williams-Exclusivite-Fnac/a20974622/w-4?storecode=6902&Origin=SEA_GOOGLE_PLA_JOUET&esl-k=sem-google%7Cnx%7Cc%7Cm%7Ck%7Cp%7Ct%7Cdm%7Ca20461236398%7Cg20461236398&gclsrc=aw.ds&gad_source=1&gad_campaignid=20455746609&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6fnK0SrFgRSVS74gShFIssUkK-NtBy-bFTrwATiAMHd0PT4Wc42CxxoCf2IQAvD_BwEhat/198077201458.html",
             },
+            {
+                title: "Lego AT-AT Star Wars",
+                description: "Piou piou !",
+                image: "/img/gift/atatlego.png.webp",
+                link: "https://www.lego.com/fr-fr/product/at-at-75440",
+            },
+            {
+                title: "Voiture de course de l’écurie APXGP tirée du film F1",
+                description: "Vroooom",
+                image: "/img/gift/f1lego.png.webp",
+                link: "https://www.lego.com/fr-fr/product/apxgp-team-race-car-from-f1-the-movie-77252",
+            },
         ],
     },
     {
