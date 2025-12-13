@@ -129,13 +129,7 @@ const categories = reactive([
                 description: "Pour protéger mes idées",
                 image: "/img/gift/casquette-2.webp",
                 link: "https://eu.patagonia.com/fr/fr/product/fitz-roy-icon-trad-cap/38364.html?dwvar_38364_color=TLVA",
-            },
-            {
-                title: "Veste Patagonia",
-                description: "Habiller comme un Bordelais",
-                image: "/img/gift/veste-natural.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077453109.html",
-            },
+            }
         ],
     },
     {
