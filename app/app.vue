@@ -43,34 +43,16 @@ const categories = reactive([
                 image: "/img/gift/les-indes-fourbes.jpg",
                 link: "https://www.fnac.com/a22208250/Juanjo-Guarnido-Les-indes-fourbes",
             },
-            {
-                title: "La route",
-                description: "Père-fils, survie.",
-                image: "/img/gift/la-route.jpg",
-                link: "https://www.fnac.com/a19356331/Manu-Larcenet-La-route",
-            },
         ],
     },
     {
         name: "Divertissement",
         items: [
             {
-                title: "Coffret The Dark Knight 4K",
-                description: "Le meilleurs de Batman.",
-                image: "/img/gift/bluray-batman.jpg",
-                link: "https://www.fnac.com/a17374716/Coffret-The-Dark-Knight-Edition-Speciale-Fnac-Blu-ray-4K-Ultra-HD-Christian-Bale-Blu-ray-4K",
-            },
-            {
                 title: "Coloretto",
                 description: "Jeu de combinaison et de prise de risque.",
                 image: "/img/gift/coloretto.webp",
                 link: "https://www.espritjeu.com/jeu-de-societe/coloretto.html?srsltid=AfmBOopuJjSSAv2k4fw2yluWBMUAloMqilbv38HzMb4V9RE9fNgIH-fV",
-            },
-            {
-                title: "7 Yokai",
-                description: "Jeu de plis asymétrique.",
-                image: "/img/gift/jeu-yokai-septet.jpg",
-                link: "https://www.espritjeu.com/7-yokai.html?srsltid=AfmBOoqW4RvXwuoLzeFFPJeRqhc5SzYgMhmlczutRU1dVsWT3NhFG7qt",
             },
             {
                 title: "Lego La tête dans les étoiles avec Pharrell Williams",
@@ -89,29 +71,6 @@ const categories = reactive([
                 description: "Vroooom",
                 image: "/img/gift/f1lego.png.webp",
                 link: "https://www.lego.com/fr-fr/product/apxgp-team-race-car-from-f1-the-movie-77252",
-            },
-        ],
-    },
-    {
-        name: "Cuisine",
-        items: [
-            {
-                title: "Sauteuse Tefal",
-                description: "Anti-adhésive.",
-                image: "/img/gift/sauteuse.jpg",
-                link: "https://amzn.eu/d/csJ1Fwf",
-            },
-            {
-                title: "Poignée Tefal",
-                description: "Amovible, Ingenio.",
-                image: "/img/gift/poignee-tefal.jpg",
-                link: "https://amzn.eu/d/9vqMBPP",
-            },
-            {
-                title: "Air fryer Ninja",
-                description: "Sans huile.",
-                image: "/img/gift/airfryer.jpg",
-                link: "https://amzn.eu/d/ceVs1Vb",
             },
         ],
     },
