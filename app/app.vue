@@ -52,6 +52,35 @@ const categories = reactive([
         ],
     },
     {
+        name: "Vêtements",
+        items: [
+            {
+                title: "Carte cadeau Uniqlo",
+                description: "Pour des basics de qualité",
+                image: "/img/gift/gift-card-uniqlo.jpg",
+                link: "https://www.uniqlo.com/fr/fr/special-feature/gift-card",
+            },
+            {
+                title: "Casquette Patagonia",
+                description: "Afin de protéger mes idées",
+                image: "/img/gift/casquette-2.webp",
+                link: "https://eu.patagonia.com/fr/fr/product/fitz-roy-icon-trad-cap/38364.html?dwvar_38364_color=TLVA",
+            },
+            {
+                title: "Veste Patagonia",
+                description: "Parfaite pour le Bordelais que je suis",
+                image: "/img/gift/veste.webp",
+                link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
+            },
+            {
+                title: "New Balance 2002R",
+                description: "On reprends les mêmes et on recommence (en 44.5)",
+                image: "/img/gift/chaussure.png",
+                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RR&_gl=1*12o4fv4*_up*MQ..*_gs*MQ..&gclsrc=aw.ds&gbraid=0AAAAADfijBS0rqjtefX4MWlKXBg4tu6uq#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RR&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
+            },
+        ],
+    },
+    {
         name: "Romans graphiques",
         items: [
             {
@@ -71,29 +100,6 @@ const categories = reactive([
                 description: "Aventure picaresque.",
                 image: "/img/gift/les-indes-fourbes.jpg",
                 link: "https://www.fnac.com/a22208250/Juanjo-Guarnido-Les-indes-fourbes",
-            },
-        ],
-    },
-    {
-        name: "Vêtements",
-        items: [
-            {
-                title: "Carte cadeau Uniqlo",
-                description: "Pour des basics de qualité",
-                image: "/img/gift/gift-card-uniqlo.jpg",
-                link: "https://www.uniqlo.com/fr/fr/special-feature/gift-card",
-            },
-            {
-                title: "Casquette Patagonia",
-                description: "Pour protéger mes idées",
-                image: "/img/gift/casquette-2.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/fitz-roy-icon-trad-cap/38364.html?dwvar_38364_color=TLVA",
-            },
-            {
-                title: "Veste Patagonia",
-                description: "Pour le Bordelais que je suis",
-                image: "/img/gift/veste.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/mens-torrentshell-3l-rain-jacket/85240.html?dwvar_85240_color=BK",
             },
         ],
     },
