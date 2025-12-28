@@ -73,11 +73,18 @@ const categories = reactive([
                 link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
             },
             {
-                title: "New Balance 2002R",
+                title: "New Balance 2002R Verte",
                 description: "On reprends les mêmes et on recommence (en 44.5)",
                 image: "/img/gift/chaussure.png",
                 link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RR&_gl=1*12o4fv4*_up*MQ..*_gs*MQ..&gclsrc=aw.ds&gbraid=0AAAAADfijBS0rqjtefX4MWlKXBg4tu6uq#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RR&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
             },
+            {
+                title: "New Balance 2002R Marron",
+                description: "On reprends les mêmes et on recommence (en 44.5)",
+                image: "/img/gift/chaussure-marron.webp",
+                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50723.html?dwvar_U2002RV1-50723_style=U2002RN#dwvar_U2002RV1-50723-EMEA-U2002RO_size=10.5&dwvar_U2002RV1-50723-EMEA-U2002RO_style=U2002RO&dwvar_U2002RV1-50723-EMEA-U2002RO_width=D&pid=U2002RV1-50723-EMEA-U2002RO&quantity=1",
+            },
+
         ],
     },
     {
