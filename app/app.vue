@@ -49,6 +49,13 @@ const categories = reactive([
                 image: "/img/gift/coloretto.webp",
                 link: "https://www.espritjeu.com/jeu-de-societe/coloretto.html?srsltid=AfmBOopuJjSSAv2k4fw2yluWBMUAloMqilbv38HzMb4V9RE9fNgIH-fV",
             },
+            {
+                title: "Phase 10",
+                description: "Jeu de cartes stratégique et fun.",
+                image: "/img/gift/phase-10.jpg",
+                link: "https://www.philibertnet.com/fr/mattel/76425-phase-10-887961497397.html",
+
+            }
         ],
     },
     {
