@@ -85,25 +85,6 @@ const categories = reactive([
                 image: "https://nb.scene7.com/is/image/NB/u2002rb_nb_05_i?$pdpflexf2SM2x$&qlt=80&fmt=webp&wid=726&hei=726",
                 link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
             },
-						{
-                title: "New Balance 2002R beige/noir",
-                description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "/img/gift/chaussure.png",
-                link: "https://www.newbalance.fr/fr/pd/u2002r/U2002RV1-FTW-820494.html?dwvar_U2002RV1-FTW-820494_style=U20026PU&_gl=1*1jpeyx1*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnYju3ZiLMrOEEabk6fOg8mwXGYVxOvwnNIFy7GNcPmtLxVJhM2zoi0aArADEALw_wcB&gclsrc=aw.ds&gbraid=0AAAAADfijBQriNNLkuqGvg3QQw6VIcD7j#dwvar_U2002RV1-FTW-820494_size=10.5&dwvar_U2002RV1-FTW-820494_style=U20026PU&dwvar_U2002RV1-FTW-820494_width=D&pid=U2002RV1-FTW-820494&quantity=1",
-            },
-            {
-                title: "New Balance 2002R Verte",
-                description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "/img/gift/chaussure.png",
-                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RR&_gl=1*12o4fv4*_up*MQ..*_gs*MQ..&gclsrc=aw.ds&gbraid=0AAAAADfijBS0rqjtefX4MWlKXBg4tu6uq#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RR&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
-            },
-            {
-                title: "New Balance 2002R Marron",
-                description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "/img/gift/chaussure-marron.webp",
-                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50723.html?dwvar_U2002RV1-50723_style=U2002RN#dwvar_U2002RV1-50723-EMEA-U2002RO_size=10.5&dwvar_U2002RV1-50723-EMEA-U2002RO_style=U2002RO&dwvar_U2002RV1-50723-EMEA-U2002RO_width=D&pid=U2002RV1-50723-EMEA-U2002RO&quantity=1",
-            },
-
         ],
     },
     {
