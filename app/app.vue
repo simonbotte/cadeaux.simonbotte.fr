@@ -79,6 +79,12 @@ const categories = reactive([
                 image: "/img/gift/veste.webp",
                 link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
             },
+						{
+                title: "New Balance 2002R beige",
+                description: "On reprends les mêmes et on recommence (en 44.5)",
+                image: "/img/gift/chaussure-beige.png",
+                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1"
+            },
             {
                 title: "New Balance 2002R Verte",
                 description: "On reprends les mêmes et on recommence (en 44.5)",
