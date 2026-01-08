@@ -82,7 +82,7 @@ const categories = reactive([
 						{
                 title: "New Balance 2002R beige",
                 description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "/img/gift/chaussure-beige.png",
+                image: "https://nb.scene7.com/is/image/NB/u2002rb_nb_05_i?$pdpflexf2SM2x$&qlt=80&fmt=webp&wid=726&hei=726"
                 link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1"
             },
             {
