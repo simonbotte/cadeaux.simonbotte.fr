@@ -82,8 +82,14 @@ const categories = reactive([
 						{
                 title: "New Balance 2002R beige",
                 description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "https://nb.scene7.com/is/image/NB/u2002rb_nb_05_i?$pdpflexf2SM2x$&qlt=80&fmt=webp&wid=726&hei=726"
-                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1"
+                image: "https://nb.scene7.com/is/image/NB/u2002rb_nb_05_i?$pdpflexf2SM2x$&qlt=80&fmt=webp&wid=726&hei=726",
+                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
+            },
+						{
+                title: "New Balance 2002R beige/noir",
+                description: "On reprends les mêmes et on recommence (en 44.5)",
+                image: "/img/gift/chaussure.png",
+                link: "https://www.newbalance.fr/fr/pd/u2002r/U2002RV1-FTW-820494.html?dwvar_U2002RV1-FTW-820494_style=U20026PU&_gl=1*1jpeyx1*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAyP3KBhD9ARIsAAJLnnYju3ZiLMrOEEabk6fOg8mwXGYVxOvwnNIFy7GNcPmtLxVJhM2zoi0aArADEALw_wcB&gclsrc=aw.ds&gbraid=0AAAAADfijBQriNNLkuqGvg3QQw6VIcD7j#dwvar_U2002RV1-FTW-820494_size=10.5&dwvar_U2002RV1-FTW-820494_style=U20026PU&dwvar_U2002RV1-FTW-820494_width=D&pid=U2002RV1-FTW-820494&quantity=1",
             },
             {
                 title: "New Balance 2002R Verte",
