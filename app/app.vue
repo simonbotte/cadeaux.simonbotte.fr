@@ -26,12 +26,6 @@ const categories = reactive([
         name: "Divertissement",
         items: [
             {
-                title: "Lego AT-AT Star Wars",
-                description: "Piou piou !",
-                image: "/img/gift/atatlego.png.webp",
-                link: "https://www.lego.com/fr-fr/product/at-at-75440",
-            },
-            {
                 title: "Voiture de course de l’écurie APXGP tirée du film F1",
                 description: "Vroooom",
                 image: "/img/gift/f1lego.png.webp",
@@ -62,22 +56,10 @@ const categories = reactive([
                 link: "https://www.uniqlo.com/fr/fr/special-feature/gift-card",
             },
             {
-                title: "Casquette Patagonia",
-                description: "Afin de protéger mes idées",
-                image: "/img/gift/casquette-2.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/fitz-roy-icon-trad-cap/38364.html?dwvar_38364_color=TLVA",
-            },
-            {
                 title: "Veste Patagonia",
                 description: "Parfaite pour le Bordelais que je suis",
                 image: "/img/gift/veste.webp",
                 link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
-            },
-						{
-                title: "New Balance 2002R beige",
-                description: "On reprends les mêmes et on recommence (en 44.5)",
-                image: "https://nb.scene7.com/is/image/NB/u2002rb_nb_05_i?$pdpflexf2SM2x$&qlt=80&fmt=webp&wid=726&hei=726",
-                link: "https://www.newbalance.fr/fr/pd/2002r/U2002RV1-50719.html?dwvar_U2002RV1-50719_style=U2002RB#dwvar_U2002RV1-50719_size=10.5&dwvar_U2002RV1-50719_style=U2002RB&dwvar_U2002RV1-50719_width=D&pid=U2002RV1-50719&quantity=1",
             },
         ],
     },
