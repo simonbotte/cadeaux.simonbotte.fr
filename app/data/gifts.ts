@@ -1,0 +1,71 @@
+export interface Gift {
+    title: string;
+    description: string;
+    image: string;
+    imageAlt?: string;
+    imageWidth: number;
+    imageHeight: number;
+    imageRounded?: boolean;
+    link: string;
+    linkLabel?: string;
+}
+
+export interface GiftCategory {
+    id: string;
+    name: string;
+    items: Gift[];
+}
+
+export const categories: GiftCategory[] = [
+    {
+        id: "accessoires",
+        name: "Accessoires",
+        items: [
+            {
+                title: "Portefeuille Ridge MagSafe — noir mat",
+                description: "Le portefeuille Ridge pour MagSafe, en noir mat. Un essentiel pour le quotidien.",
+                image: "/img/gift/ridge-magsafe-noir.jpg",
+                imageAlt: "Portefeuille Ridge noir mat avec fixation MagSafe",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                imageRounded: true,
+                link: "https://eu.ridge.com/fr-fr/products/ridge-wallet-for-magsafe-matte-black?variant=55268711367032",
+            },
+            {
+                title: "Boucle Sport Nike — gris asphalte, 46 mm",
+                description: "Un nouveau bracelet pour mon Apple Watch : la Boucle Sport Nike gris asphalte, en 46 mm.",
+                image: "/img/gift/apple-nike-gris-asphalte-46mm.jpg",
+                imageAlt: "Bracelet Apple Watch Boucle Sport Nike gris asphalte avec languette Run Swoosh",
+                imageWidth: 1144,
+                imageHeight: 1144,
+                link: "https://www.apple.com/fr/shop/product/mkuy4zm/a/boucle-sport-nike-gris-asphalte-46-mm",
+            },
+        ],
+    },
+    {
+        id: "petits-plaisirs",
+        name: "Petits plaisirs",
+        items: [
+            {
+                title: "Amuseables Pickle — Jellycat",
+                description: "Un cornichon en peluche, tout doux et plein de bonne humeur. Difficile de lui résister.",
+                image: "/img/gift/jellycat-cornichon.jpg",
+                imageAlt: "Peluche cornichon Jellycat Amuseables Pickle, souriante avec de petits pieds marron",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                link: "https://fr.jellycat.com/amuseables-pickle/",
+            },
+            {
+                title: "Une surprise de la collection GTA VI",
+                description: "Quelque chose de la collection officielle GTA VI chez Rockstar Games. Je te laisse choisir la surprise !",
+                image: "/img/gift/rockstar-gta-vi-collection.jpg",
+                imageAlt: "La collection GTA VI de Rockstar Games : vêtements, casquettes, sacs et accessoires roses et bleus",
+                imageWidth: 1200,
+                imageHeight: 400,
+                imageRounded: true,
+                link: "https://store.rockstargames.com/fr/grand-theft-auto-vi-collection",
+                linkLabel: "Explorer la collection",
+            },
+        ],
+    },
+];

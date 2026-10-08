@@ -1,0 +1,17 @@
+// Compile only the USWDS components used by the wishlist.
+@use "uswds-core" with (
+    $theme-show-notifications: false,
+    $theme-font-type-mono: false,
+    $theme-font-path: "../../../node_modules/@uswds/uswds/dist/fonts",
+    $theme-image-path: "../../../node_modules/@uswds/uswds/dist/img",
+    $theme-color-primary: "blue-warm-80v",
+    $theme-color-primary-dark: "blue-warm-90",
+    $theme-color-primary-darker: "blue-warm-90",
+    $theme-card-border-width: 1px,
+    $theme-card-border-color: "gray-cool-10",
+    $theme-card-border-radius: "lg"
+);
+
+@forward "usa-card";
+@forward "usa-button";
+@forward "usa-skipnav";

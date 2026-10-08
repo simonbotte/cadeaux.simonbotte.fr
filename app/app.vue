@@ -1,256 +1,188 @@
-<script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
-const { $gsap, $ScrollTrigger, $snow } = useNuxtApp();
-const wrapperRef = ref(null);
-const headerImageRef = ref(null);
-const headerTitleRef = ref(null);
-const introWrapperRef = ref(null);
-const introImageRef = ref(null);
-const introTextRef = ref(null);
+<script setup lang="ts">
+import { categories } from "~/data/gifts";
 
-const starSnow = () => {
-    $snow.start({
-        color: "#fff",
-        count: 50,
-        minSize: 6,
-        maxSize: 20,
-    });
+const search = ref("");
+const selectedCategory = ref("all");
+const menuOpen = ref(false);
+const resultsHeading = ref<HTMLElement | null>(null);
+const totalGifts = categories.reduce((total, category) => total + category.items.length, 0);
+
+const categoryDescriptions: Record<string, string> = {
+    accessoires: "De petits détails qui accompagnent le quotidien.",
+    "petits-plaisirs": "Une touche de douceur et un détour par Vice City.",
 };
 
-const stopSnow = () => {
-    $snow.stop();
-};
+const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/(\d)\s+(?=mm\b)/g, "$1");
+const visibleCategories = computed(() => {
+    const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
 
-const categories = reactive([
-    {
-        name: "Divertissement",
-        items: [
-            {
-                title: "Voiture de course de l’écurie APXGP tirée du film F1",
-                description: "Vroooom",
-                image: "/img/gift/f1lego.png.webp",
-                link: "https://www.lego.com/fr-fr/product/apxgp-team-race-car-from-f1-the-movie-77252",
-            },
-            {
-                title: "Coloretto",
-                description: "Jeu de combinaison et de prise de risque.",
-                image: "/img/gift/coloretto.webp",
-                link: "https://www.espritjeu.com/jeu-de-societe/coloretto.html?srsltid=AfmBOopuJjSSAv2k4fw2yluWBMUAloMqilbv38HzMb4V9RE9fNgIH-fV",
-            },
-            {
-                title: "Phase 10",
-                description: "Jeu de cartes stratégique et fun.",
-                image: "/img/gift/phase-10.jpg",
-                link: "https://www.philibertnet.com/fr/mattel/76425-phase-10-887961497397.html",
+    return categories
+        .filter((category) => selectedCategory.value === "all" || category.id === selectedCategory.value)
+        .map((category) => ({
+            ...category,
+            items: category.items.filter((item) => {
+                const content = normalize(`${item.title} ${item.description} ${category.name} ${new URL(item.link).hostname}`);
+                return terms.every((term) => content.includes(term));
+            }),
+        }))
+        .filter((category) => category.items.length > 0);
+});
+const visibleCount = computed(() => visibleCategories.value.reduce((total, category) => total + category.items.length, 0));
+const hasFilters = computed(() => search.value.trim() !== "" || selectedCategory.value !== "all");
 
-            }
-        ],
-    },
-    {
-        name: "Vêtements",
-        items: [
-            {
-                title: "Carte cadeau Uniqlo",
-                description: "Pour des basics de qualité",
-                image: "/img/gift/gift-card-uniqlo.jpg",
-                link: "https://www.uniqlo.com/fr/fr/special-feature/gift-card",
-            },
-            {
-                title: "Veste Patagonia",
-                description: "Parfaite pour le Bordelais que je suis",
-                image: "/img/gift/veste.webp",
-                link: "https://eu.patagonia.com/fr/fr/product/mens-point-reyes-cotton-canvas-jacket/198077194316.html",
-            },
-        ],
-    },
-    {
-        name: "Romans graphiques",
-        items: [
-            {
-                title: "Tananarive",
-                description: "Road-trip intime.",
-                image: "/img/gift/tananarive.jpg",
-                link: "https://www.fnac.com/a15812154/Mark-Eacersall-Tananarive",
-            },
-            {
-                title: "Jours de sable",
-                description: "Dust Bowl, photo.",
-                image: "/img/gift/jours-de-sable.jpg",
-                link: "https://www.fnac.com/a15760835/Aimee-de-Jongh-Jours-de-sable",
-            },
-            {
-                title: "Les Indes fourbes",
-                description: "Aventure picaresque.",
-                image: "/img/gift/les-indes-fourbes.jpg",
-                link: "https://www.fnac.com/a22208250/Juanjo-Guarnido-Les-indes-fourbes",
-            },
-        ],
-    },
-]);
+function resetFilters() {
+    search.value = "";
+    selectedCategory.value = "all";
+}
+
+function showResults() {
+    resultsHeading.value?.focus({ preventScroll: true });
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
+    resultsHeading.value?.scrollIntoView({ behavior, block: "start" });
+}
 
 useHead({
-    title: "Idées de cadeaux pour mon anniversaire",
+    title: "Les envies de Simon — Idées de cadeaux pour Noël",
+    htmlAttrs: { lang: "fr" },
     meta: [
         {
             name: "description",
-            content:
-                "Découvre ma liste d'idées de cadeaux pour mon anniversaire, remplie de suggestions uniques et inspirantes pour célébrer cette occasion spéciale.",
+            content: "Ma liste de Noël : un portefeuille Ridge MagSafe noir, un cornichon Jellycat, un bracelet Apple Watch Nike de 46 mm et une surprise de la collection GTA VI.",
         },
-        {
-            name: "og:title",
-            content: "Idées de cadeaux pour mon anniversaire",
-        },
-        {
-            name: "og:description",
-            content:
-                "Découvre ma liste d'idées de cadeaux pour mon anniversaire, remplie de suggestions uniques et inspirantes pour célébrer cette occasion spéciale.",
-        },
-        {
-            name: "og:image",
-            content: "https://kdo.smnb.fr/og-birthday.png",
-        },
+        { property: "og:title", content: "Les envies de Simon — Cadeaux de Noël" },
+        { property: "og:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },
+        { property: "og:image", content: "https://kdo.smnb.fr/og-image.png" },
     ],
-    link: [
-        {
-            rel: "icon",
-            type: "image/webp",
-            href: "/favicon.webp",
-        },
-    ],
-    htmlAttrs: {
-        lang: "fr",
-        class: "bg-orange-950",
-    },
-});
-
-onMounted(() => {
-    const gsap = $gsap;
-    const ScrollTrigger = $ScrollTrigger;
-
-    gsap.set(wrapperRef.value, { perspective: 1000 });
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: wrapperRef.value,
-            start: "top top",
-            end: "bottom 10%",
-            scrub: 0.5,
-            pin: true,
-        },
-    });
-
-    tl.to(headerImageRef.value, {
-        opacity: 0,
-        ease: "none",
-    });
-
-    tl.to(headerTitleRef.value, { opacity: 0, ease: "none", filter: "blur(20px)" }, "<");
-
-    tl.fromTo(introWrapperRef.value, { opacity: 0 }, { opacity: 1, ease: "none" }, "<");
-    tl.from(introImageRef.value, { opacity: 0, ease: "none" }, "<");
-    tl.from(introTextRef.value, { opacity: 0, ease: "none", filter: "blur(10px)" }, "<");
-    starSnow({
-        autoResize: false,
-        rotation: false,
-    });
-
-    onBeforeUnmount(() => {
-        ScrollTrigger.getAll().forEach((t) => t.kill());
-    });
+    link: [{ rel: "icon", type: "image/webp", href: "/favicon.webp" }],
 });
 </script>
 
 <template>
-    <div>
-        <div ref="wrapperRef" class="relative overflow-hidden min-h-screen bg-orange-950">
-            <header
-                ref="headerRef"
-                class="absolute inset-0 flex flex-col items-center justify-center text-center text-orange-100 h-screen"
-            >
-                <img
-                    ref="headerImageRef"
-                    src="/path-camp.png"
-                    alt="Photo de sapin enneigé"
-                    class="absolute inset-0 w-full h-full object-cover brightness-80"
-                />
-                <div class="relative z-10 p-8" ref="headerTitleRef">
-                    <h1 class="text-6xl font-bold text-orange-100 font-serif">
-                        Idées de cadeaux <br />pour mon anniversaire
-                    </h1>
-                </div>
+    <div id="haut" class="wishlist">
+        <a class="usa-skipnav" href="#envies">Aller aux idées de cadeaux</a>
+
+        <div class="personal-banner">
+            <SiteIcon name="gift" />
+            <span>Au pied du sapin, une petite liste d’envies.</span>
+        </div>
+
+        <div class="landing-shell">
+            <header class="site-header">
+                <a class="site-brand" href="#haut" aria-label="Les envies de Simon, accueil">
+                    <span class="brand-mark"><SiteIcon name="gift" /></span>
+                    <span>Les envies de Simon<span class="brand-period">.</span></span>
+                </a>
+
+                <nav class="desktop-nav" aria-label="Navigation principale">
+                    <a href="#envies">Les idées</a>
+                    <a href="#manifesto">L’esprit de la liste</a>
+                    <a class="nav-arrow" href="#envies" aria-label="Découvrir les idées de cadeaux">
+                        <SiteIcon name="arrow-down" />
+                    </a>
+                </nav>
+
+                <button class="usa-button menu-toggle" type="button" :aria-expanded="menuOpen" aria-controls="mobile-menu" @click="menuOpen = !menuOpen">
+                    {{ menuOpen ? "Fermer" : "Menu" }}
+                    <SiteIcon :name="menuOpen ? 'close' : 'menu'" />
+                </button>
+
+                <nav v-show="menuOpen" id="mobile-menu" class="mobile-nav" aria-label="Navigation mobile">
+                    <a href="#envies" @click="menuOpen = false">Les idées <SiteIcon name="arrow-down" /></a>
+                    <a href="#manifesto" @click="menuOpen = false">L’esprit de la liste <SiteIcon name="arrow-down" /></a>
+                </nav>
             </header>
 
-            <section
-                ref="introWrapperRef"
-                class="absolute top-0 inset-0 h-screen flex flex-col items-center justify-center"
-            >
-                <img
-                    ref="introImageRef"
-                    src="/path-bordeaux.png"
-                    alt="Photo de sapin enneigé"
-                    class="absolute inset-0 w-full h-full object-cover brightness-50"
-                />
-                <div
-                    ref="introTextRef"
-                    class="relative z-10 flex flex-col items-center justify-center gap-4 max-w-200 m-auto text-orange-100 p-4"
-                >
-                    <h2 class="text-3xl text-bolder font-serif text-center">Un anniversaire, une continuité</h2>
-                    <div class="h-px w-40 bg-orange-100"></div>
-                    <p class="text-center">
-                        Un anniversaire, c’est un repère sur un chemin qui continue d’avancer. C’est l’occasion de
-                        regarder le parcours déjà accompli, entouré des personnes que j’aime, puis de poursuivre la
-                        route à mon rythme, avec curiosité et enthousiasme.
-                    </p>
-                    <p class="text-center">
-                        Dans cette liste, tu trouveras des envies qui me ressemblent : de quoi m’évader et m’amuser, en
-                        construisant, en jouant ou en découvrant de belles histoires. Il y a aussi quelques pièces pour
-                        m’habiller simplement, durablement et confortablement.
-                    </p>
-                </div>
-            </section>
+            <main>
+                <section class="hero" aria-labelledby="hero-title">
+                    <p class="eyebrow">Ma liste de Noël</p>
+                    <h1 id="hero-title">Bonjour, Noël.</h1>
+                    <p class="hero-description">Quelques envies sous le sapin, et le plaisir de se retrouver.</p>
+
+                    <div class="hero-discovery">
+                        <div class="hero-memory">
+                            <img src="/sapin.jpg" alt="Des branches de sapin recouvertes de neige" width="1920" height="1080" fetchpriority="high" />
+                            <div class="memory-caption">
+                                <span class="memory-kicker">L’esprit de Noël</span>
+                                <p>Des envies sous le sapin.<br />Des moments à partager.</p>
+                            </div>
+                            <span class="memory-stamp" aria-hidden="true"><SiteIcon name="tree" /></span>
+                        </div>
+                    </div>
+
+                    <a class="hero-scroll" href="#envies">Trouver une petite attention <SiteIcon name="arrow-down" /></a>
+                </section>
+
+                <WishlistManifesto />
+
+                <section id="envies" class="gifts-section" aria-labelledby="gifts-title">
+                    <div class="section-intro">
+                        <div>
+                            <p class="eyebrow">À offrir, avec le cœur</p>
+                            <h2 id="gifts-title" ref="resultsHeading" tabindex="-1">De quoi me faire sourire.</h2>
+                        </div>
+                        <p class="collection-note">{{ totalGifts }} idées, {{ categories.length }} univers. <br />Et aucune obligation, évidemment.</p>
+                    </div>
+
+                    <div class="collection-toolbar">
+                        <div class="category-filters" role="group" aria-label="Filtrer les cadeaux par catégorie">
+                            <button type="button" :aria-pressed="selectedCategory === 'all'" @click="selectedCategory = 'all'">
+                                Toutes les envies <span>{{ totalGifts }}</span>
+                            </button>
+                            <button v-for="category in categories" :key="category.id" type="button" :aria-pressed="selectedCategory === category.id" @click="selectedCategory = category.id">
+                                {{ category.name }} <span>{{ category.items.length }}</span>
+                            </button>
+                        </div>
+                        <p class="results-count" role="status" aria-live="polite" aria-atomic="true">{{ visibleCount }} {{ visibleCount > 1 ? "idées" : "idée" }}</p>
+                    </div>
+
+                    <div v-if="hasFilters" class="active-search">
+                        <p v-if="search.trim()">Les envies qui correspondent à <strong>« {{ search.trim() }} »</strong></p>
+                        <p v-else>{{ categories.find((category) => category.id === selectedCategory)?.name }}</p>
+                        <button type="button" @click="resetFilters">Tout afficher <SiteIcon name="close" /></button>
+                    </div>
+
+                    <div id="gift-results">
+                        <section v-for="category in visibleCategories" :key="category.id" class="gift-category" :aria-labelledby="`title-${category.id}`">
+                            <div class="category-heading">
+                                <div class="category-title">
+                                    <span class="category-number" aria-hidden="true">0{{ categories.findIndex((item) => item.id === category.id) + 1 }}</span>
+                                    <h3 :id="`title-${category.id}`">{{ category.name }}</h3>
+                                </div>
+                                <p>{{ categoryDescriptions[category.id] }}</p>
+                            </div>
+                            <ul class="usa-card-group gift-grid" role="list">
+                                <GiftCard v-for="gift in category.items" :key="gift.title" :gift="gift" />
+                            </ul>
+                        </section>
+
+                        <div v-if="visibleCount === 0" class="empty-state">
+                            <span class="empty-icon"><SiteIcon name="search" /></span>
+                            <h3>Cette envie reste à inventer.</h3>
+                            <p>Aucune idée ne correspond à ces filtres. Essayez un autre mot ou retrouvez toute la liste.</p>
+                            <button class="usa-button" type="button" @click="resetFilters">Voir toutes les envies <SiteIcon name="arrow-right" /></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="a-propos" class="about-section" aria-labelledby="about-title">
+                    <div class="about-heading">
+                        <p class="eyebrow">L’esprit de la liste</p>
+                        <h2 id="about-title">Noël, le plaisir<br />d’être ensemble.</h2>
+                        <span class="about-decoration" aria-hidden="true"><SiteIcon name="sparkles" /></span>
+                    </div>
+                    <div class="about-copy">
+                        <p>Noël, c’est l’occasion de ralentir, de se retrouver et de partager de bons moments avec les personnes que j’aime. Les cadeaux en font partie, mais ce sont surtout ces instants ensemble qui rendent les fêtes précieuses.</p>
+                        <p>Dans cette liste, tu trouveras des envies qui me ressemblent : des accessoires pour le quotidien, un cornichon tout doux et une petite surprise de l’univers GTA VI. Quelques idées choisies avec le sourire, à glisser sous le sapin.</p>
+                        <p class="about-signature">Le plus beau cadeau, c’est de passer Noël ensemble.<span>Simon</span></p>
+                    </div>
+                </section>
+            </main>
         </div>
-        <section class="bg-orange-200 pt-10 flex flex-col gap-8 pb-10 px-3">
-            <div
-                v-for="category in categories"
-                class="max-w-200 m-auto flex flex-col gap-4"
-                :key="`category-${category.name}`"
-            >
-                <h2 class="text-3xl text-bolder font-serif">{{ category.name }}</h2>
-                <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-                    <li v-for="item in category.items" :key="`item-${item.title}`" class="min-h-80 h-full">
-                        <a
-                            :href="item.link"
-                            target="_blank"
-                            class="bg-orange-50 p-4 flex flex-col justify-between rounded-2xl h-full"
-                        >
-                            <div class="mx-auto w-full max-w-[440px] overflow-hidden relative h-full flex items-center">
-                                <img
-                                    :src="item.image"
-                                    :alt="item.title"
-                                    class="w-full rounded-md"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                                <div
-                                    class="absolute bottom-0 w-full h-8 bg-linear-to-t from-orange-50 to-transparent from-60%"
-                                ></div>
-                            </div>
-                            <div class="flex flex-col">
-                                <span class="text-lg font-medium">{{ item.title }}</span>
-                                <span class="opacity-70 text-sm">{{ item.description }}</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+
+        <footer class="site-footer">
+            <a class="footer-brand" href="#haut">Les envies de Simon.</a>
+            <p>Des idées choisies avec soin. Des cadeaux offerts avec le cœur.</p>
+            <a class="back-to-top" href="#haut">Retour en haut <SiteIcon name="arrow-up" /></a>
+        </footer>
     </div>
 </template>
-
-<style>
-.snowflake__inner:before {
-    background-image: url("/favicon.webp") !important;
-    background-size: cover;
-    animation: none !important;
-}
-</style>
