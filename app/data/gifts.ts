@@ -75,4 +75,19 @@ export const categories: GiftCategory[] = [
             },
         ],
     },
+    {
+        id: "cuisine",
+        name: "Cuisine",
+        items: [
+            {
+                title: "Plat airfryer Pyrex — 1,5 L, poignée amovible",
+                description: "Un plat en verre de 1,5 L pour airfryer à double tiroir, avec une poignée amovible. Pratique pour préparer de bons petits plats et les servir à table.",
+                image: "/img/gift/pyrex-airfryer-poignee-amovible-1-5l.png",
+                imageAlt: "Plat rectangulaire Pyrex en verre de 1,5 L avec poignée amovible en inox",
+                imageWidth: 500,
+                imageHeight: 500,
+                link: "https://www.pyrex.fr/products/plat-airfryer-en-verre-avec-poignee-amovible?variant=57073354342773",
+            },
+        ],
+    },
 ];

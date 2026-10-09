@@ -10,6 +10,7 @@ const totalGifts = categories.reduce((total, category) => total + category.items
 const categoryDescriptions: Record<string, string> = {
     accessoires: "De petits détails qui accompagnent le quotidien.",
     "petits-plaisirs": "Une touche de douceur et de quoi jouer ensemble.",
+    cuisine: "De quoi préparer de bons petits plats.",
 };
 
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/(\d)\s+(?=mm\b)/g, "$1");
@@ -47,7 +48,7 @@ useHead({
     meta: [
         {
             name: "description",
-            content: "Ma liste de Noël : un portefeuille Ridge MagSafe noir, un cornichon Jellycat, un bracelet Apple Watch Nike de 46 mm, une surprise GTA VI et une paire de Joy-Con 2.",
+            content: "Mes idées de cadeaux pour Noël : accessoires, douceur, jeux vidéo et cuisine, avec des Joy-Con 2 et un plat Pyrex pour airfryer.",
         },
         { property: "og:title", content: "Les envies de Simon — Cadeaux de Noël" },
         { property: "og:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },
@@ -186,7 +187,7 @@ useHead({
                     </div>
                     <div class="about-copy">
                         <p>Noël, c’est l’occasion de ralentir, de se retrouver et de partager de bons moments avec les personnes que j’aime. Les cadeaux en font partie, mais ce sont surtout ces instants ensemble qui rendent les fêtes précieuses.</p>
-                        <p>Dans cette liste, tu trouveras des envies qui me ressemblent : des accessoires pour le quotidien, un cornichon tout doux, une petite surprise de l’univers GTA VI et des Joy-Con 2 pour jouer ensemble. Quelques idées choisies avec le sourire, à glisser sous le sapin.</p>
+                        <p>Dans cette liste, tu trouveras des envies qui me ressemblent : des accessoires pour le quotidien, un cornichon tout doux, une petite surprise de l’univers GTA VI, des Joy-Con 2 pour jouer ensemble et un plat Pyrex pour cuisiner. Quelques idées choisies avec le sourire, à glisser sous le sapin.</p>
                         <p class="about-signature">Le plus beau cadeau, c’est de passer Noël ensemble.<span>Simon</span></p>
                     </div>
                 </section>
