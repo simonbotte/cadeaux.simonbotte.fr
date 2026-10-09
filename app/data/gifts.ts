@@ -73,6 +73,15 @@ export const categories: GiftCategory[] = [
                 imageHeight: 1000,
                 link: "https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-droite-jaune-clair-nintendo-switch-2-nintendo-switch-2-0045496321857",
             },
+            {
+                title: "Petites plantes adorables — LEGO Botanicals 10371",
+                description: "Une menthe poivrée et une camomille à construire, dans deux pots souriants avec un livre et une tasse de thé. Un petit duo plein de bonne humeur à exposer.",
+                image: "/img/gift/lego-petites-plantes-adorables-10371.jpg",
+                imageAlt: "Deux plantes LEGO : un pot marron souriant qui lit un livre et un pot violet qui tient une tasse de thé",
+                imageWidth: 1000,
+                imageHeight: 875,
+                link: "https://www.lego.com/fr-fr/product/cozy-plants-10371",
+            },
         ],
     },
     {
