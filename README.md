@@ -26,5 +26,7 @@ Le site utilise [USWDS 3.14](https://designsystem.digital.gov/), avec une direct
 - `app/components/WishlistManifesto.vue` présente l’esprit de la liste avec du texte et des pictogrammes SVG dessinés dans `ManifestoPictogram.vue`. Les badges se réordonnent et le cœur s’anime au clic ; la réduction des animations est respectée.
 - `app/data/gifts.ts` contient les catégories et les cadeaux.
 - `app/app.vue` gère la recherche (insensible à la casse et aux accents), les filtres et le menu mobile.
+- `public/og-image.png` est le visuel de partage au format 1200 × 630, créé avec ImageGen dans le thème du site.
+- `public/favicon.svg` reprend le cadeau du logo en blanc sur bleu marine, avec des exports ICO, WebP et une icône Apple Touch.
 
 Les liens marchands s’ouvrent dans un nouvel onglet. Le site prend en compte la préférence de réduction des animations, et les résultats des filtres sont annoncés aux lecteurs d’écran.

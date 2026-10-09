@@ -51,9 +51,23 @@ useHead({
         },
         { property: "og:title", content: "Les envies de Simon — Cadeaux de Noël" },
         { property: "og:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },
-        { property: "og:image", content: "https://kdo.smnb.fr/og-image.png" },
+        { property: "og:image", content: "https://kdo.smnb.fr/og-image.png?v=2" },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: "Les envies de Simon. Bonjour, Noël. Des envies sous le sapin, des moments à partager, avec des branches de sapin enneigées." },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Les envies de Simon — Cadeaux de Noël" },
+        { name: "twitter:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },
+        { name: "twitter:image", content: "https://kdo.smnb.fr/og-image.png?v=2" },
+        { name: "twitter:image:alt", content: "Les envies de Simon. Bonjour, Noël. Des envies sous le sapin, des moments à partager, avec des branches de sapin enneigées." },
+        { name: "theme-color", content: "#10245b" },
     ],
-    link: [{ rel: "icon", type: "image/webp", href: "/favicon.webp" }],
+    link: [
+        { rel: "icon", type: "image/x-icon", sizes: "16x16 32x32 48x48 64x64", href: "/favicon.ico?v=2" },
+        { rel: "icon", type: "image/svg+xml", sizes: "any", href: "/favicon.svg?v=2" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png?v=2" },
+    ],
 });
 </script>
 
