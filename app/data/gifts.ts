@@ -7,7 +7,6 @@ export interface Gift {
     imageHeight: number;
     imageRounded?: boolean;
     link: string;
-    linkLabel?: string;
 }
 
 export interface GiftCategory {
@@ -64,7 +63,15 @@ export const categories: GiftCategory[] = [
                 imageHeight: 400,
                 imageRounded: true,
                 link: "https://store.rockstargames.com/fr/grand-theft-auto-vi-collection",
-                linkLabel: "Explorer la collection",
+            },
+            {
+                title: "Paire de Joy-Con 2 — bleu clair et rouge clair",
+                description: "Deux manettes Joy-Con 2 pour la Nintendo Switch 2, avec leurs dragonnes. De quoi partager des parties à deux dans les jeux compatibles.",
+                image: "/img/gift/nintendo-joy-con-2.jpg",
+                imageAlt: "Manettes Nintendo Joy-Con 2 gauche bleu clair et droite rouge clair avec leurs dragonnes",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                link: "https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-clair-droite-rouge-clair-nintendo-switch-2-nintendo-switch-2-0045496321413",
             },
         ],
     },

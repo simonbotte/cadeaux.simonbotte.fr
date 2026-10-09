@@ -20,7 +20,7 @@ defineProps<{ gift: Gift }>();
             </div>
             <div class="usa-card__footer">
                 <a class="usa-button usa-button--outline gift-link" :href="gift.link" target="_blank" rel="noopener noreferrer">
-                    {{ gift.linkLabel ?? 'Découvrir le cadeau' }} <SiteIcon name="arrow-up-right" />
+                    Découvrir l'idée <SiteIcon name="arrow-up-right" />
                     <span class="sr-only"> : {{ gift.title }} (nouvel onglet)</span>
                 </a>
             </div>
