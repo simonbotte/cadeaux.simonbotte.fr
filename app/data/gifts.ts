@@ -42,6 +42,48 @@ export const categories: GiftCategory[] = [
         ],
     },
     {
+        id: "vetements",
+        name: "Vêtements",
+        items: [
+            {
+                title: "Sweat à capuche oversize Uniqlo — vert foncé, taille L",
+                description: "Un sweat à capuche à la coupe oversize, pour être bien au chaud. Le coloris souhaité est le vert foncé (59), en taille L.",
+                image: "/img/gift/uniqlo-sweat-capuche-vert-fonce-l.jpg",
+                imageAlt: "Sweat à capuche oversize Uniqlo vert foncé",
+                imageWidth: 900,
+                imageHeight: 1200,
+                link: "https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=59&sizeDisplayCode=005",
+            },
+            {
+                title: "T-shirt Boxy Uniqlo — bleu, taille L",
+                description: "Un T-shirt 100 % coton à la coupe ample et courte, facile à porter au quotidien. Le coloris souhaité est le bleu (67), en taille L.",
+                image: "/img/gift/uniqlo-t-shirt-boxy-bleu-l.jpg",
+                imageAlt: "T-shirt Boxy Uniqlo bleu à manches courtes",
+                imageWidth: 900,
+                imageHeight: 1200,
+                link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=67&sizeDisplayCode=005",
+            },
+            {
+                title: "T-shirt Boxy Uniqlo — blanc, taille L",
+                description: "Un T-shirt 100 % coton à la coupe ample et courte, facile à porter au quotidien. Le coloris souhaité est le blanc (00), en taille L.",
+                image: "/img/gift/uniqlo-t-shirt-boxy-blanc-l.jpg",
+                imageAlt: "T-shirt Boxy Uniqlo blanc à manches courtes",
+                imageWidth: 900,
+                imageHeight: 1200,
+                link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=00&sizeDisplayCode=005",
+            },
+            {
+                title: "T-shirt Boxy Uniqlo — vert olive, taille L",
+                description: "Un T-shirt 100 % coton à la coupe ample et courte, facile à porter au quotidien. Le coloris souhaité est le vert olive (56), en taille L.",
+                image: "/img/gift/uniqlo-t-shirt-boxy-vert-olive-l.jpg",
+                imageAlt: "T-shirt Boxy Uniqlo vert olive à manches courtes",
+                imageWidth: 900,
+                imageHeight: 1200,
+                link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=56&sizeDisplayCode=005",
+            },
+        ],
+    },
+    {
         id: "petits-plaisirs",
         name: "Petits plaisirs",
         items: [
