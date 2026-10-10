@@ -48,7 +48,7 @@ export const categories: GiftCategory[] = [
             {
                 title: "Sweat à capuche oversize Uniqlo — vert foncé, taille L",
                 description: "Un sweat à capuche à la coupe oversize, pour être bien au chaud. Le coloris souhaité est le vert foncé (59), en taille L.",
-                image: "/img/gift/uniqlo-sweat-capuche-vert-fonce-l.jpg",
+                image: "/img/gift/uniqlo-sweat-capuche-vert-fonce-produit.jpg",
                 imageAlt: "Sweat à capuche oversize Uniqlo vert foncé",
                 imageWidth: 900,
                 imageHeight: 1200,
