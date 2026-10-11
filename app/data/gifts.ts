@@ -7,6 +7,8 @@ export interface Gift {
     imageHeight: number;
     imageRounded?: boolean;
     link: string;
+    price: number;
+    priceFrom?: boolean;
 }
 
 export interface GiftCategory {
@@ -14,6 +16,9 @@ export interface GiftCategory {
     name: string;
     items: Gift[];
 }
+
+// Prices in EUR, checked on the linked merchant pages. Update the date when refreshing them.
+export const pricesCheckedAt = "2026-10-11";
 
 export const categories: GiftCategory[] = [
     {
@@ -29,6 +34,7 @@ export const categories: GiftCategory[] = [
                 imageHeight: 1000,
                 imageRounded: true,
                 link: "https://eu.ridge.com/fr-fr/products/ridge-wallet-for-magsafe-matte-black?variant=55268711367032",
+                price: 149,
             },
             {
                 title: "Boucle Sport Nike — gris asphalte, 46 mm",
@@ -38,6 +44,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 1144,
                 imageHeight: 1144,
                 link: "https://www.apple.com/fr/shop/product/mkuy4zm/a/boucle-sport-nike-gris-asphalte-46-mm",
+                price: 49,
             },
         ],
     },
@@ -53,6 +60,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 900,
                 imageHeight: 1200,
                 link: "https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=59&sizeDisplayCode=005",
+                price: 39.9,
             },
             {
                 title: "T-shirt Boxy Uniqlo — bleu, taille L",
@@ -62,6 +70,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 900,
                 imageHeight: 1200,
                 link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=67&sizeDisplayCode=005",
+                price: 14.9,
             },
             {
                 title: "T-shirt Boxy Uniqlo — blanc, taille L",
@@ -71,6 +80,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 900,
                 imageHeight: 1200,
                 link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=00&sizeDisplayCode=005",
+                price: 14.9,
             },
             {
                 title: "T-shirt Boxy Uniqlo — vert olive, taille L",
@@ -80,6 +90,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 900,
                 imageHeight: 1200,
                 link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=56&sizeDisplayCode=005",
+                price: 14.9,
             },
         ],
     },
@@ -95,6 +106,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 1000,
                 imageHeight: 1000,
                 link: "https://fr.jellycat.com/amuseables-pickle/",
+                price: 23,
             },
             {
                 title: "Une surprise de la collection GTA VI",
@@ -105,6 +117,8 @@ export const categories: GiftCategory[] = [
                 imageHeight: 400,
                 imageRounded: true,
                 link: "https://store.rockstargames.com/fr/grand-theft-auto-vi-collection",
+                price: 4.99,
+                priceFrom: true,
             },
             {
                 title: "Paire de Joy-Con 2 — bleu et jaune clair",
@@ -114,6 +128,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 1000,
                 imageHeight: 1000,
                 link: "https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-droite-jaune-clair-nintendo-switch-2-nintendo-switch-2-0045496321857",
+                price: 79.99,
             },
             {
                 title: "Petites plantes adorables — LEGO Botanicals 10371",
@@ -123,6 +138,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 1000,
                 imageHeight: 875,
                 link: "https://www.lego.com/fr-fr/product/cozy-plants-10371",
+                price: 19.99,
             },
         ],
     },
@@ -138,6 +154,7 @@ export const categories: GiftCategory[] = [
                 imageWidth: 500,
                 imageHeight: 500,
                 link: "https://www.pyrex.fr/products/plat-airfryer-en-verre-avec-poignee-amovible?variant=57073354342773",
+                price: 15.9,
             },
         ],
     },

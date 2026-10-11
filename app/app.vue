@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { categories } from "~/data/gifts";
+import { categories, pricesCheckedAt } from "~/data/gifts";
 
 const search = ref("");
 const selectedCategory = ref("all");
 const menuOpen = ref(false);
+const showPrices = ref(false);
 const resultsHeading = ref<HTMLElement | null>(null);
 const totalGifts = categories.reduce((total, category) => total + category.items.length, 0);
+const pricesCheckedOn = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "UTC" }).format(new Date(pricesCheckedAt));
 
 const categoryDescriptions: Record<string, string> = {
     accessoires: "De petits détails qui accompagnent le quotidien.",
@@ -148,7 +150,11 @@ useHead({
                                 {{ category.name }} <span>{{ category.items.length }}</span>
                             </button>
                         </div>
-                        <p class="results-count" role="status" aria-live="polite" aria-atomic="true">{{ visibleCount }} {{ visibleCount > 1 ? "idées" : "idée" }}</p>
+                        <label class="price-toggle" for="show-prices">
+                            <input id="show-prices" v-model="showPrices" type="checkbox" aria-controls="gift-results" />
+                            Afficher les prix
+                        </label>
+                        <p class="sr-only" role="status" aria-live="polite" aria-atomic="true">{{ visibleCount }} {{ visibleCount > 1 ? "idées" : "idée" }}</p>
                     </div>
 
                     <div v-if="hasFilters" class="active-search">
@@ -158,6 +164,7 @@ useHead({
                     </div>
 
                     <div id="gift-results">
+                        <p v-if="showPrices" class="prices-note">Prix indicatifs, hors livraison, relevés le <time :datetime="pricesCheckedAt">{{ pricesCheckedOn }}</time>.</p>
                         <section v-for="category in visibleCategories" :key="category.id" class="gift-category" :aria-labelledby="`title-${category.id}`">
                             <div class="category-heading">
                                 <div class="category-title">
@@ -167,7 +174,7 @@ useHead({
                                 <p>{{ categoryDescriptions[category.id] }}</p>
                             </div>
                             <ul class="usa-card-group gift-grid" role="list">
-                                <GiftCard v-for="gift in category.items" :key="gift.title" :gift="gift" />
+                                <GiftCard v-for="gift in category.items" :key="gift.title" :gift="gift" :show-prices="showPrices" />
                             </ul>
                         </section>
 

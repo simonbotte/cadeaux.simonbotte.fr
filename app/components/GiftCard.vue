@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { Gift } from "~/data/gifts";
 
-defineProps<{ gift: Gift }>();
+withDefaults(defineProps<{ gift: Gift; showPrices?: boolean }>(), { showPrices: false });
+
+const currency = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" });
 </script>
 
 <template>
@@ -19,6 +21,7 @@ defineProps<{ gift: Gift }>();
                 <p>{{ gift.description }}</p>
             </div>
             <div class="usa-card__footer">
+                <p v-if="showPrices" class="gift-price"><span v-if="gift.priceFrom" class="gift-price-prefix">À partir de </span>{{ currency.format(gift.price) }}</p>
                 <a class="usa-button usa-button--outline gift-link" :href="gift.link" target="_blank" rel="noopener noreferrer">
                     Découvrir l'idée <SiteIcon name="arrow-up-right" />
                     <span class="sr-only"> : {{ gift.title }} (nouvel onglet)</span>

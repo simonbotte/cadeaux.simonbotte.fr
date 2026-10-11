@@ -30,3 +30,21 @@ Le site utilise [USWDS 3.14](https://designsystem.digital.gov/), avec une direct
 - `public/favicon.svg` reprend le cadeau du logo en blanc sur bleu marine, avec des exports ICO, WebP et une icône Apple Touch.
 
 Les liens marchands s’ouvrent dans un nouvel onglet. Le site prend en compte la préférence de réduction des animations, et les résultats des filtres sont annoncés aux lecteurs d’écran.
+
+## Prix
+
+La case « Afficher les prix » remplace le compteur visible dans la barre des filtres. Elle est décochée à chaque chargement ; les prix et leur date de relevé ne s’affichent qu’une fois cochée. Le compteur reste annoncé aux lecteurs d’écran.
+
+Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date `pricesCheckedAt`. Ils sont indicatifs, hors livraison, et ne se mettent pas à jour automatiquement. Relevé du 11 octobre 2026 sur les fiches marchandes liées aux cadeaux :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Portefeuille Ridge MagSafe noir mat | 149,00 € | [Ridge EU](https://eu.ridge.com/fr-fr/products/ridge-wallet-for-magsafe-matte-black?variant=55268711367032) |
+| Boucle Sport Nike gris asphalte, 46 mm | 49,00 € | [Apple](https://www.apple.com/fr/shop/product/mkuy4zm/a/boucle-sport-nike-gris-asphalte-46-mm) |
+| Sweat à capuche oversize vert foncé, L | 39,90 € | [Uniqlo](https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=59&sizeDisplayCode=005) |
+| T-shirt Boxy bleu, blanc ou vert olive, L | 14,90 € chacun | [Uniqlo](https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=67&sizeDisplayCode=005) |
+| Amuseables Pickle | 23,00 € | [Jellycat](https://fr.jellycat.com/amuseables-pickle/) |
+| Surprise de la collection GTA VI | À partir de 4,99 € (stickers holographiques) | [Rockstar Games](https://store.rockstargames.com/fr/grand-theft-auto-vi-collection) |
+| Joy-Con 2 bleu et jaune clair | 79,99 € | [E.Leclerc](https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-droite-jaune-clair-nintendo-switch-2-nintendo-switch-2-0045496321857) |
+| LEGO Botanicals 10371 | 19,99 € | [LEGO](https://www.lego.com/fr-fr/product/cozy-plants-10371) |
+| Plat airfryer Pyrex 1,5 L avec poignée | 15,90 € | [Pyrex](https://www.pyrex.fr/products/plat-airfryer-en-verre-avec-poignee-amovible?variant=57073354342773) |
