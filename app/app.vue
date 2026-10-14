@@ -13,6 +13,7 @@ const categoryDescriptions: Record<string, string> = {
     accessoires: "De petits détails qui accompagnent le quotidien.",
     vetements: "Des essentiels confortables, dans mes couleurs préférées.",
     "petits-plaisirs": "Une touche de douceur, des briques et de quoi jouer ensemble.",
+    cinema: "Des films en Blu-ray 4K pour les soirées cinéma à la maison.",
     cuisine: "De quoi préparer de bons petits plats.",
 };
 
@@ -51,7 +52,7 @@ useHead({
     meta: [
         {
             name: "description",
-            content: "Mes idées de cadeaux pour Noël : accessoires, vêtements Uniqlo, douceur, jeux vidéo, LEGO et cuisine, avec des Joy-Con 2 et un plat Pyrex pour airfryer.",
+            content: "Mes idées de cadeaux pour Noël : accessoires, vêtements Uniqlo, douceur, jeux vidéo, LEGO, cinéma en Blu-ray 4K et cuisine.",
         },
         { property: "og:title", content: "Les envies de Simon — Cadeaux de Noël" },
         { property: "og:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },
@@ -164,7 +165,7 @@ useHead({
                     </div>
 
                     <div id="gift-results">
-                        <p v-if="showPrices" class="prices-note">Prix indicatifs, hors livraison, relevés le <time :datetime="pricesCheckedAt">{{ pricesCheckedOn }}</time>.</p>
+                        <p v-if="showPrices" class="prices-note">Prix indicatifs, hors livraison. Dernier relevé le <time :datetime="pricesCheckedAt">{{ pricesCheckedOn }}</time>.</p>
                         <section v-for="category in visibleCategories" :key="category.id" class="gift-category" :aria-labelledby="`title-${category.id}`">
                             <div class="category-heading">
                                 <div class="category-title">
@@ -195,7 +196,7 @@ useHead({
                     </div>
                     <div class="about-copy">
                         <p>Noël, c’est l’occasion de ralentir, de se retrouver et de partager de bons moments avec les personnes que j’aime. Les cadeaux en font partie, mais ce sont surtout ces instants ensemble qui rendent les fêtes précieuses.</p>
-                        <p>Dans cette liste, tu trouveras des envies qui me ressemblent : des accessoires pour le quotidien, des vêtements Uniqlo confortables, un cornichon tout doux, une petite surprise de l’univers GTA VI, des Joy-Con 2 pour jouer ensemble, des LEGO à construire et un plat Pyrex pour cuisiner. Quelques idées choisies avec le sourire, à glisser sous le sapin.</p>
+                        <p>Dans cette liste, tu trouveras des envies qui me ressemblent : des accessoires pour le quotidien, des vêtements Uniqlo confortables, un cornichon tout doux, une petite surprise de l’univers GTA VI, des Joy-Con 2 pour jouer ensemble, des LEGO à construire, des films en Blu-ray 4K et un plat Pyrex pour cuisiner. Quelques idées choisies avec le sourire, à glisser sous le sapin.</p>
                         <p class="about-signature">Le plus beau cadeau, c’est de passer Noël ensemble.<span>Simon</span></p>
                     </div>
                 </section>

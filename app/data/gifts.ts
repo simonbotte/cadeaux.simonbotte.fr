@@ -17,8 +17,8 @@ export interface GiftCategory {
     items: Gift[];
 }
 
-// Prices in EUR, checked on the linked merchant pages. Update the date when refreshing them.
-export const pricesCheckedAt = "2026-10-11";
+// Prices in EUR, checked on the linked merchant pages. Date of the latest price check.
+export const pricesCheckedAt = "2026-10-14";
 
 export const categories: GiftCategory[] = [
     {
@@ -139,6 +139,32 @@ export const categories: GiftCategory[] = [
                 imageHeight: 875,
                 link: "https://www.lego.com/fr-fr/product/cozy-plants-10371",
                 price: 19.99,
+            },
+        ],
+    },
+    {
+        id: "cinema",
+        name: "Cinéma",
+        items: [
+            {
+                title: "L’Odyssée — Blu-ray 4K",
+                description: "L’épopée d’Ulysse et son retour à Ithaque, à découvrir en Blu-ray 4K. En précommande chez Cultura, avec une sortie annoncée au 31 décembre 2026.",
+                image: "/img/gift/odyssee-blu-ray-4k.jpg",
+                imageAlt: "Jaquette de L’Odyssée en Blu-ray 4K Ultra HD",
+                imageWidth: 660,
+                imageHeight: 831,
+                link: "https://www.cultura.com/p-l-odyssee-13289834.html",
+                price: 29.99,
+            },
+            {
+                title: "Tenet — Blu-ray 4K",
+                description: "Le film de Christopher Nolan, entre espionnage et inversion du temps, en Blu-ray 4K. De quoi profiter d’une soirée cinéma à la maison.",
+                image: "/img/gift/tenet-blu-ray-4k.jpg",
+                imageAlt: "Jaquette de Tenet de Christopher Nolan en Blu-ray 4K Ultra HD",
+                imageWidth: 660,
+                imageHeight: 922,
+                link: "https://www.cultura.com/p-tenet-11765864.html",
+                price: 14.99,
             },
         ],
     },

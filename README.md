@@ -35,7 +35,7 @@ Les liens marchands s’ouvrent dans un nouvel onglet. Le site prend en compte l
 
 La case « Afficher les prix » remplace le compteur visible dans la barre des filtres. Elle est décochée à chaque chargement ; les prix et leur date de relevé ne s’affichent qu’une fois cochée. Le compteur reste annoncé aux lecteurs d’écran.
 
-Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date `pricesCheckedAt`. Ils sont indicatifs, hors livraison, et ne se mettent pas à jour automatiquement. Relevé du 11 octobre 2026 sur les fiches marchandes liées aux cadeaux :
+Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date du dernier relevé `pricesCheckedAt`. Ils sont indicatifs, hors livraison, et ne se mettent pas à jour automatiquement. Relevé du 11 octobre 2026 sur les fiches marchandes liées aux cadeaux :
 
 | Cadeau | Prix relevé | Source |
 | --- | --- | --- |
@@ -48,3 +48,12 @@ Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date `pric
 | Joy-Con 2 bleu et jaune clair | 79,99 € | [E.Leclerc](https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-droite-jaune-clair-nintendo-switch-2-nintendo-switch-2-0045496321857) |
 | LEGO Botanicals 10371 | 19,99 € | [LEGO](https://www.lego.com/fr-fr/product/cozy-plants-10371) |
 | Plat airfryer Pyrex 1,5 L avec poignée | 15,90 € | [Pyrex](https://www.pyrex.fr/products/plat-airfryer-en-verre-avec-poignee-amovible?variant=57073354342773) |
+
+Ajouts du 14 octobre 2026, avec les prix vendus et expédiés par Cultura :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| L’Odyssée — Blu-ray 4K | 29,99 € | [Cultura](https://www.cultura.com/p-l-odyssee-13289834.html) |
+| Tenet — Blu-ray 4K | 14,99 € | [Cultura](https://www.cultura.com/p-tenet-11765864.html) |
+
+L’Odyssée est en précommande, avec une sortie annoncée par Cultura au 31 décembre 2026.
