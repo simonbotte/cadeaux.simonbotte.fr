@@ -148,12 +148,12 @@ export const categories: GiftCategory[] = [
         items: [
             {
                 title: "L’Odyssée — Blu-ray 4K",
-                description: "L’épopée d’Ulysse et son retour à Ithaque, à découvrir en Blu-ray 4K. En précommande chez Cultura, avec une sortie annoncée au 31 décembre 2026.",
-                image: "/img/gift/odyssee-blu-ray-4k.jpg",
-                imageAlt: "Jaquette de L’Odyssée en Blu-ray 4K Ultra HD",
-                imageWidth: 660,
-                imageHeight: 831,
-                link: "https://www.cultura.com/p-l-odyssee-13289834.html",
+                description: "L’épopée d’Ulysse et son retour à Ithaque, à découvrir en Blu-ray 4K. En précommande à la Fnac, avec une sortie annoncée au 18 novembre 2026.",
+                image: "/img/gift/odyssee-blu-ray-4k-fnac.jpg",
+                imageAlt: "Coffret de L’Odyssée en Blu-ray 4K Ultra HD avec un cheval de Troie en flammes",
+                imageWidth: 340,
+                imageHeight: 340,
+                link: "https://www.fnac.com/a23410774/L-Odyssee-2026-Blu-ray-4K-Ultra-HD-Matt-Damon-Blu-ray-4K",
                 price: 29.99,
             },
             {

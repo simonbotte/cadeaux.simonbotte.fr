@@ -49,11 +49,11 @@ Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date du de
 | LEGO Botanicals 10371 | 19,99 € | [LEGO](https://www.lego.com/fr-fr/product/cozy-plants-10371) |
 | Plat airfryer Pyrex 1,5 L avec poignée | 15,90 € | [Pyrex](https://www.pyrex.fr/products/plat-airfryer-en-verre-avec-poignee-amovible?variant=57073354342773) |
 
-Ajouts du 14 octobre 2026, avec les prix vendus et expédiés par Cultura :
+Ajouts du 14 octobre 2026, avec les prix relevés à la Fnac et chez Cultura :
 
 | Cadeau | Prix relevé | Source |
 | --- | --- | --- |
-| L’Odyssée — Blu-ray 4K | 29,99 € | [Cultura](https://www.cultura.com/p-l-odyssee-13289834.html) |
+| L’Odyssée — Blu-ray 4K | 29,99 € | [Fnac](https://www.fnac.com/a23410774/L-Odyssee-2026-Blu-ray-4K-Ultra-HD-Matt-Damon-Blu-ray-4K) |
 | Tenet — Blu-ray 4K | 14,99 € | [Cultura](https://www.cultura.com/p-tenet-11765864.html) |
 
-L’Odyssée est en précommande, avec une sortie annoncée par Cultura au 31 décembre 2026.
+L’Odyssée est en précommande, avec une sortie annoncée par la Fnac au 18 novembre 2026.
