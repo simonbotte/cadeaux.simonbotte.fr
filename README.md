@@ -42,7 +42,7 @@ Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date du de
 | Portefeuille Ridge MagSafe noir mat | 149,00 € | [Ridge EU](https://eu.ridge.com/fr-fr/products/ridge-wallet-for-magsafe-matte-black?variant=55268711367032) |
 | Boucle Sport Nike gris asphalte, 46 mm | 49,00 € | [Apple](https://www.apple.com/fr/shop/product/mkuy4zm/a/boucle-sport-nike-gris-asphalte-46-mm) |
 | Sweat à capuche oversize vert foncé, L | 39,90 € | [Uniqlo](https://www.uniqlo.com/fr/fr/products/E471808-000/00?colorDisplayCode=59&sizeDisplayCode=005) |
-| T-shirt Boxy bleu, blanc ou vert olive, L | 14,90 € chacun | [Uniqlo](https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=67&sizeDisplayCode=005) |
+| T-shirt Boxy bleu ou blanc, L | 14,90 € chacun | [Uniqlo](https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=67&sizeDisplayCode=005) |
 | Amuseables Pickle | 23,00 € | [Jellycat](https://fr.jellycat.com/amuseables-pickle/) |
 | Surprise de la collection GTA VI | À partir de 4,99 € (stickers holographiques) | [Rockstar Games](https://store.rockstargames.com/fr/grand-theft-auto-vi-collection) |
 | Joy-Con 2 bleu et jaune clair | 79,99 € | [E.Leclerc](https://www.e.leclerc/fp/paire-de-manettes-joy-con-2-gauche-bleu-droite-jaune-clair-nintendo-switch-2-nintendo-switch-2-0045496321857) |
@@ -57,3 +57,11 @@ Ajouts du 14 octobre 2026, avec les prix relevés à la Fnac et chez Cultura :
 | Tenet — Blu-ray 4K | 14,99 € | [Cultura](https://www.cultura.com/p-tenet-11765864.html) |
 
 L’Odyssée est en précommande, avec une sortie annoncée par la Fnac au 18 novembre 2026.
+
+Ajout du 23 octobre 2026, avec le prix relevé dans la sélection de précommandes cinéma de la Fnac :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Le film à regarder quand… — Thomas Deseur | 19,95 € | [Fnac](https://www.fnac.com/l143740/Reserver-des-maintenant-Cinema/Tous-les-livres-sur-le-Cinema/Art-Cinema-Musique) |
+
+Le livre est en précommande, avec une parution annoncée au 19 novembre 2026. Le t-shirt vert olive a été retiré de la liste.

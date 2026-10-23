@@ -18,7 +18,7 @@ export interface GiftCategory {
 }
 
 // Prices in EUR, checked on the linked merchant pages. Date of the latest price check.
-export const pricesCheckedAt = "2026-10-14";
+export const pricesCheckedAt = "2026-10-23";
 
 export const categories: GiftCategory[] = [
     {
@@ -80,16 +80,6 @@ export const categories: GiftCategory[] = [
                 imageWidth: 900,
                 imageHeight: 1200,
                 link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=00&sizeDisplayCode=005",
-                price: 14.9,
-            },
-            {
-                title: "T-shirt Boxy Uniqlo — vert olive, taille L",
-                description: "Un T-shirt 100 % coton à la coupe ample et courte, facile à porter au quotidien. Le coloris souhaité est le vert olive (56), en taille L.",
-                image: "/img/gift/uniqlo-t-shirt-boxy-vert-olive-l.jpg",
-                imageAlt: "T-shirt Boxy Uniqlo vert olive à manches courtes",
-                imageWidth: 900,
-                imageHeight: 1200,
-                link: "https://www.uniqlo.com/fr/fr/products/E487962-000/00?colorDisplayCode=56&sizeDisplayCode=005",
                 price: 14.9,
             },
         ],
@@ -165,6 +155,16 @@ export const categories: GiftCategory[] = [
                 imageHeight: 922,
                 link: "https://www.cultura.com/p-tenet-11765864.html",
                 price: 14.99,
+            },
+            {
+                title: "Le film à regarder quand… — Thomas Deseur",
+                description: "Le livre de Thomas Deseur pour trouver un film selon son humeur et les moments de la vie. En précommande à la Fnac, avec une parution annoncée au 19 novembre 2026.",
+                image: "/img/gift/thomas-deseur-le-film-a-regarder-quand.jpg",
+                imageAlt: "Couverture illustrée du livre Le film à regarder quand… de Thomas Deseur, avec une vitrine de téléviseurs",
+                imageWidth: 340,
+                imageHeight: 340,
+                link: "https://www.fnac.com/a23680974/Thomas-Deseur-Le-film-a-regarder-quand",
+                price: 19.95,
             },
         ],
     },
