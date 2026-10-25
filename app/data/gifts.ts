@@ -8,6 +8,7 @@ export interface Gift {
     imageRounded?: boolean;
     link: string;
     price: number;
+    priceCurrency?: string;
     priceFrom?: boolean;
 }
 
@@ -17,8 +18,8 @@ export interface GiftCategory {
     items: Gift[];
 }
 
-// Prices in EUR, checked on the linked merchant pages. Date of the latest price check.
-export const pricesCheckedAt = "2026-10-23";
+// Prices in EUR unless priceCurrency is specified, checked on the linked merchant pages. Date of the latest price check.
+export const pricesCheckedAt = "2026-10-25";
 
 export const categories: GiftCategory[] = [
     {
@@ -88,6 +89,18 @@ export const categories: GiftCategory[] = [
         id: "petits-plaisirs",
         name: "Petits plaisirs",
         items: [
+            {
+                title: "Jeu de cartes The Office — theory11",
+                description: "Un jeu de cartes premium inspiré de The Office, avec les personnages de Dunder Mifflin et des clins d’œil aux moments cultes de la série. De quoi partager une soirée jeux à Scranton.",
+                image: "/img/gift/the-office-playing-cards.jpg",
+                imageAlt: "Étui du jeu de cartes The Office de theory11, illustré avec les personnages de la série et un trophée Dundie",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                imageRounded: true,
+                link: "https://store.theory11.com/products/the-office-playing-cards",
+                price: 12.95,
+                priceCurrency: "USD",
+            },
             {
                 title: "Amuseables Pickle — Jellycat",
                 description: "Un cornichon en peluche, tout doux et plein de bonne humeur. Difficile de lui résister.",

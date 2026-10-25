@@ -35,7 +35,7 @@ Les liens marchands s’ouvrent dans un nouvel onglet. Le site prend en compte l
 
 La case « Afficher les prix » remplace le compteur visible dans la barre des filtres. Elle est décochée à chaque chargement ; les prix et leur date de relevé ne s’affichent qu’une fois cochée. Le compteur reste annoncé aux lecteurs d’écran.
 
-Les prix en euros sont enregistrés dans `app/data/gifts.ts`, avec la date du dernier relevé `pricesCheckedAt`. Ils sont indicatifs, hors livraison, et ne se mettent pas à jour automatiquement. Relevé du 11 octobre 2026 sur les fiches marchandes liées aux cadeaux :
+Les prix sont enregistrés dans `app/data/gifts.ts`, avec la date du dernier relevé `pricesCheckedAt`. Ils sont en euros par défaut ; `priceCurrency` permet de conserver la devise du marchand lorsqu’elle diffère. Ils sont indicatifs, hors livraison, et ne se mettent pas à jour automatiquement. Relevé du 11 octobre 2026 sur les fiches marchandes liées aux cadeaux :
 
 | Cadeau | Prix relevé | Source |
 | --- | --- | --- |
@@ -65,3 +65,11 @@ Ajout du 23 octobre 2026, avec le prix relevé dans la sélection de précommand
 | Le film à regarder quand… — Thomas Deseur | 19,95 € | [Fnac](https://www.fnac.com/l143740/Reserver-des-maintenant-Cinema/Tous-les-livres-sur-le-Cinema/Art-Cinema-Musique) |
 
 Le livre est en précommande, avec une parution annoncée au 19 novembre 2026. Le t-shirt vert olive a été retiré de la liste.
+
+Ajout du 25 octobre 2026 dans « Petits plaisirs », avec le prix relevé chez theory11 :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Jeu de cartes The Office — theory11 | 12,95 $ US | [theory11](https://store.theory11.com/products/the-office-playing-cards) |
+
+Le prix du jeu est conservé en dollars américains, la devise affichée par le marchand, sans conversion en euros.
