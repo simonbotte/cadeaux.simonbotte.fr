@@ -73,3 +73,11 @@ Ajout du 25 octobre 2026 dans « Petits plaisirs », avec le prix relevé chez t
 | Jeu de cartes The Office — theory11 | 12,95 $ US | [theory11](https://store.theory11.com/products/the-office-playing-cards) |
 
 Le prix du jeu est conservé en dollars américains, la devise affichée par le marchand, sans conversion en euros.
+
+Ajout du 25 octobre 2026 dans « High-tech », avec le prix de départ relevé sur l’Apple Store France :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| iPhone Duo — Apple | À partir de 2 339,00 € (256 Go) | [Apple](https://www.apple.com/fr/shop/buy-iphone/iphone-duo) |
+
+Aucune couleur ni capacité de stockage n’est imposée pour cette idée ; le lien ouvre la présentation officielle du produit.

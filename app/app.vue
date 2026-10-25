@@ -11,6 +11,7 @@ const pricesCheckedOn = new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", ti
 
 const categoryDescriptions: Record<string, string> = {
     accessoires: "De petits détails qui accompagnent le quotidien.",
+    "high-tech": "Des envies de technologie pour le quotidien et les loisirs.",
     vetements: "Des essentiels confortables, dans mes couleurs préférées.",
     "petits-plaisirs": "Une touche de douceur, des briques et de quoi jouer ensemble.",
     cinema: "Des films en Blu-ray 4K pour les soirées cinéma à la maison.",
@@ -52,7 +53,7 @@ useHead({
     meta: [
         {
             name: "description",
-            content: "Mes idées de cadeaux pour Noël : accessoires, vêtements Uniqlo, douceur, jeux vidéo, LEGO, cinéma en Blu-ray 4K et cuisine.",
+            content: "Mes idées de cadeaux pour Noël : accessoires, high-tech, vêtements Uniqlo, douceur, jeux vidéo, LEGO, cinéma en Blu-ray 4K et cuisine.",
         },
         { property: "og:title", content: "Les envies de Simon — Cadeaux de Noël" },
         { property: "og:description", content: "Quelques envies sous le sapin, et le plaisir de se retrouver à Noël." },

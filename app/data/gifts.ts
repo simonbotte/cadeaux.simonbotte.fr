@@ -50,6 +50,23 @@ export const categories: GiftCategory[] = [
         ],
     },
     {
+        id: "high-tech",
+        name: "High-tech",
+        items: [
+            {
+                title: "iPhone Duo — Apple",
+                description: "L’iPhone pliable d’Apple, avec un grand écran de 7,6 pouces pour les films, les jeux et deux apps côte à côte. Une envie pour voir les choses en grand.",
+                image: "/img/gift/apple-iphone-duo.jpg",
+                imageAlt: "iPhone Duo fermé, tenu dans une main, avec l’écran d’accueil affiché",
+                imageWidth: 966,
+                imageHeight: 640,
+                link: "https://www.apple.com/fr/iphone-duo/",
+                price: 2339,
+                priceFrom: true,
+            },
+        ],
+    },
+    {
         id: "vetements",
         name: "Vêtements",
         items: [
