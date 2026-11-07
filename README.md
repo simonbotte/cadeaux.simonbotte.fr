@@ -81,3 +81,11 @@ Ajout du 25 octobre 2026 dans « High-tech », avec le prix de départ relevé s
 | iPhone Duo — Apple | À partir de 2 339,00 € (256 Go) | [Apple](https://www.apple.com/fr/shop/buy-iphone/iphone-duo) |
 
 Aucune couleur ni capacité de stockage n’est imposée pour cette idée ; le lien ouvre la présentation officielle du produit.
+
+Ajout du 7 novembre 2026 dans « High-tech », avec le prix relevé chez IPLN :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Objectif Sigma 50-120 mm F2.8 DC OS Contemporary — monture Sony E | 799,00 € | [IPLN](https://ipln.fr/objectif-hybride/29820-19111-sigma-objectif-50-120mm-f28-dc-os-contemporary) |
+
+Le lien ouvre directement la déclinaison en monture Sony E ; l’objectif existe aussi en Canon RF et Fujifilm X chez le marchand. Les paramètres de suivi publicitaire de l’URL d’origine ont été retirés.

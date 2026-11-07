@@ -19,7 +19,7 @@ export interface GiftCategory {
 }
 
 // Prices in EUR unless priceCurrency is specified, checked on the linked merchant pages. Date of the latest price check.
-export const pricesCheckedAt = "2026-10-25";
+export const pricesCheckedAt = "2026-11-07";
 
 export const categories: GiftCategory[] = [
     {
@@ -63,6 +63,16 @@ export const categories: GiftCategory[] = [
                 link: "https://www.apple.com/fr/iphone-duo/",
                 price: 2339,
                 priceFrom: true,
+            },
+            {
+                title: "Objectif Sigma 50-120 mm F2.8 DC OS Contemporary — monture Sony E",
+                description: "Un télézoom lumineux pour hybride APS-C, avec une ouverture constante F2.8 et une stabilisation intégrée, dans un format compact d’environ 390 g. Idéal pour les portraits, le sport et la vidéo. La monture souhaitée est la Sony E.",
+                image: "/img/gift/sigma-50-120mm-f2-8-dc-os-contemporary-sony-e.jpg",
+                imageAlt: "Objectif Sigma 50-120 mm F2.8 DC OS Contemporary noir, avec son pare-soleil",
+                imageWidth: 800,
+                imageHeight: 800,
+                link: "https://ipln.fr/objectif-hybride/29820-19111-sigma-objectif-50-120mm-f28-dc-os-contemporary",
+                price: 799,
             },
         ],
     },
