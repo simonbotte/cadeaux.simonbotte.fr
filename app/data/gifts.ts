@@ -19,7 +19,7 @@ export interface GiftCategory {
 }
 
 // Prices in EUR unless priceCurrency is specified, checked on the linked merchant pages. Date of the latest price check.
-export const pricesCheckedAt = "2026-11-07";
+export const pricesCheckedAt = "2026-11-08";
 
 export const categories: GiftCategory[] = [
     {
@@ -46,6 +46,16 @@ export const categories: GiftCategory[] = [
                 imageHeight: 1144,
                 link: "https://www.apple.com/fr/shop/product/mkuy4zm/a/boucle-sport-nike-gris-asphalte-46-mm",
                 price: 49,
+            },
+            {
+                title: "Smart Folio pour iPad mini (A20 Pro) — bleu marine",
+                description: "Un étui fin et léger qui protège l’avant et l’arrière de l’iPad mini. Il se fixe par aimants, réveille l’iPad à l’ouverture et se replie en support pour lire, écrire ou regarder un film. Le coloris souhaité est le bleu marine.",
+                image: "/img/gift/apple-smart-folio-ipad-mini-a20-pro-bleu-marine.jpg",
+                imageAlt: "Smart Folio bleu marine pour iPad mini, vu de face, avec sa pliure au centre",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                link: "https://www.apple.com/fr/shop/product/mkr44zm/a/smart-folio-pour-ipad-mini-a20-pro-bleu-marine",
+                price: 89,
             },
         ],
     },

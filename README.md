@@ -89,3 +89,11 @@ Ajout du 7 novembre 2026 dans « High-tech », avec le prix relevé chez IPLN :
 | Objectif Sigma 50-120 mm F2.8 DC OS Contemporary — monture Sony E | 799,00 € | [IPLN](https://ipln.fr/objectif-hybride/29820-19111-sigma-objectif-50-120mm-f28-dc-os-contemporary) |
 
 Le lien ouvre directement la déclinaison en monture Sony E ; l’objectif existe aussi en Canon RF et Fujifilm X chez le marchand. Les paramètres de suivi publicitaire de l’URL d’origine ont été retirés.
+
+Ajout du 8 novembre 2026 dans « Accessoires », avec le prix relevé sur l’Apple Store France :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Smart Folio pour iPad mini (A20 Pro) — bleu marine | 89,00 € | [Apple](https://www.apple.com/fr/shop/product/mkr44zm/a/smart-folio-pour-ipad-mini-a20-pro-bleu-marine) |
+
+L’étui est compatible avec l’iPad mini (A20 Pro). Les paramètres de suivi de l’URL d’origine ont été retirés.
