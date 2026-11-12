@@ -19,7 +19,7 @@ export interface GiftCategory {
 }
 
 // Prices in EUR unless priceCurrency is specified, checked on the linked merchant pages. Date of the latest price check.
-export const pricesCheckedAt = "2026-11-08";
+export const pricesCheckedAt = "2026-11-11";
 
 export const categories: GiftCategory[] = [
     {
@@ -56,6 +56,16 @@ export const categories: GiftCategory[] = [
                 imageHeight: 1000,
                 link: "https://www.apple.com/fr/shop/product/mkr44zm/a/smart-folio-pour-ipad-mini-a20-pro-bleu-marine",
                 price: 89,
+            },
+            {
+                title: "Chausse-pied en bois laqué rouge, 25 cm — Norbert Bottier",
+                description: "Un chausse-pied en bois laqué rouge foncé, avec un cordon pour le suspendre. Le talon glisse le long de la lame sans écraser l’arrière de la chaussure, qui garde ainsi sa forme. La longueur souhaitée est le 25 cm, assez court pour le glisser dans un sac ou une valise.",
+                image: "/img/gift/norbert-bottier-chausse-pied-bois-laque-rouge.jpg",
+                imageAlt: "Chausse-pied en bois laqué rouge foncé, avec un cordon noué au bout du manche",
+                imageWidth: 1000,
+                imageHeight: 1000,
+                link: "https://norbertbottier.com/products/chausse-pied-bois-16-cm?variant=47405653819726",
+                price: 15,
             },
         ],
     },
@@ -179,6 +189,16 @@ export const categories: GiftCategory[] = [
                 imageHeight: 875,
                 link: "https://www.lego.com/fr-fr/product/cozy-plants-10371",
                 price: 19.99,
+            },
+            {
+                title: "Panorama de Marvel — LEGO Marvel 67006",
+                description: "Une ville à micro-échelle qui réunit les lieux cultes de l’univers Marvel : la tour des Avengers, le Daily Bugle, le Baxter Building ou encore la tour Fisk. 1 261 pièces à construire, puis un beau modèle à exposer. En précommande chez LEGO, avec une expédition annoncée à partir du 1er janvier 2027.",
+                image: "/img/gift/lego-panorama-marvel-67006.jpg",
+                imageAlt: "Set LEGO Panorama de Marvel monté : le Daily Bugle, la tour des Avengers, le Baxter Building surmonté de la Torche humaine et la tour Fisk, entourés de vaisseaux",
+                imageWidth: 1000,
+                imageHeight: 605,
+                link: "https://www.lego.com/fr-fr/product/the-marvel-skyline-67006",
+                price: 99.99,
             },
         ],
     },

@@ -97,3 +97,12 @@ Ajout du 8 novembre 2026 dans « Accessoires », avec le prix relevé sur l’Ap
 | Smart Folio pour iPad mini (A20 Pro) — bleu marine | 89,00 € | [Apple](https://www.apple.com/fr/shop/product/mkr44zm/a/smart-folio-pour-ipad-mini-a20-pro-bleu-marine) |
 
 L’étui est compatible avec l’iPad mini (A20 Pro). Les paramètres de suivi de l’URL d’origine ont été retirés.
+
+Ajouts du 11 novembre 2026, avec les prix relevés chez Norbert Bottier et sur la boutique LEGO France :
+
+| Cadeau | Prix relevé | Source |
+| --- | --- | --- |
+| Chausse-pied en bois laqué rouge, 25 cm — Norbert Bottier | 15,00 € | [Norbert Bottier](https://norbertbottier.com/products/chausse-pied-bois-16-cm?variant=47405653819726) |
+| Panorama de Marvel — LEGO Marvel 67006 | 99,99 € | [LEGO](https://www.lego.com/fr-fr/product/the-marvel-skyline-67006) |
+
+Le chausse-pied rejoint « Accessoires ». Malgré l’adresse de la page, il n’existe plus en 16 cm : le marchand le propose en 25 cm (15,00 €), 40 cm (20,00 €) et 54 cm (25,00 €). La longueur retenue est le 25 cm, et le lien ouvre directement cette déclinaison. Le set LEGO rejoint « Petits plaisirs » ; il est en précommande, avec une expédition annoncée à partir du 1er janvier 2027. Les paramètres d’affiliation de l’URL LEGO d’origine ont été retirés.
